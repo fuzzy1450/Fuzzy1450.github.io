@@ -63,7 +63,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     var init, initJson;
     initJson = function (index_type) {
         return $.ajax({
-            url: '/js/404.json', //yes, this need to be here, in html format. God Forbid Archive goes down. a backup is found at js/404.jsonrf
+            url: 'http://toomanysniper.tf/js/404/404.json',
             type: 'get',
             dataType: 'json'
         }).done(function (data) {
