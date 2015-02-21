@@ -54,6 +54,23 @@ a {
   color: #404048;
 }
 
+#center {
+	text-align: center;
+}
+
+#bigTextbox{
+	width:150px;
+	height:150px;
+}
+
+#BigText {
+	text-align: center;
+	font-size: 102px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .extra {
   color: #15d880;
 }
