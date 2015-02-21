@@ -25,7 +25,7 @@ html, body {
 
 body {
   font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: url(../images/404/Daft_Punk.svg) no-repeat center center #101012;
+  background: url(../images/404/Daft_Punk_background.svg) no-repeat center center #101012;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
