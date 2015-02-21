@@ -1,0 +1,278 @@
+{
+  "keyboard": {
+    "type": [
+      {
+        "row": [
+          {
+            "key": [
+              {
+                "char": "a",
+                "code": 65
+              },
+              {
+                "char": "z",
+                "code": 90
+              },
+              {
+                "char": "e",
+                "code": 69
+              },
+              {
+                "char": "r",
+                "code": 82
+              },
+              {
+                "char": "t",
+                "code": 84
+              },
+              {
+                "char": "y",
+                "code": 89
+              },
+              {
+                "char": "u",
+                "code": 85
+              },
+              {
+                "char": "i",
+                "code": 73
+              },
+              {
+                "char": "o",
+                "code": 79
+              },
+              {
+                "char": "p",
+                "code": 80
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "q",
+                "code": 81
+              },
+              {
+                "char": "s",
+                "code": 83
+              },
+              {
+                "char": "d",
+                "code": 68
+              },
+              {
+                "char": "f",
+                "code": 70
+              },
+              {
+                "char": "g",
+                "code": 71
+              },
+              {
+                "char": "h",
+                "code": 72
+              },
+              {
+                "char": "j",
+                "code": 74
+              },
+              {
+                "char": "k",
+                "code": 75
+              },
+              {
+                "char": "l",
+                "code": 76
+              },
+              {
+                "char": "m",
+                "code": 77
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "w",
+                "code": 87
+              },
+              {
+                "char": "x",
+                "code": 88
+              },
+              {
+                "char": "c",
+                "code": 67
+              },
+              {
+                "char": "v",
+                "code": 86
+              },
+              {
+                "char": "b",
+                "code": 66
+              },
+              {
+                "char": "n",
+                "code": 78
+              },
+              {
+                "char": ",",
+                "code": 188
+              },
+              {
+                "char": ";",
+                "code": 186
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "",
+                "code": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": [
+          {
+            "key": [
+              {
+                "char": "q",
+                "code": 81
+              },
+              {
+                "char": "w",
+                "code": 87
+              },
+              {
+                "char": "e",
+                "code": 69
+              },
+              {
+                "char": "r",
+                "code": 82
+              },
+              {
+                "char": "t",
+                "code": 84
+              },
+              {
+                "char": "y",
+                "code": 89
+              },
+              {
+                "char": "u",
+                "code": 85
+              },
+              {
+                "char": "i",
+                "code": 73
+              },
+              {
+                "char": "o",
+                "code": 79
+              },
+              {
+                "char": "p",
+                "code": 80
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "a",
+                "code": 65
+              },
+              {
+                "char": "s",
+                "code": 83
+              },
+              {
+                "char": "d",
+                "code": 68
+              },
+              {
+                "char": "f",
+                "code": 70
+              },
+              {
+                "char": "g",
+                "code": 71
+              },
+              {
+                "char": "h",
+                "code": 72
+              },
+              {
+                "char": "j",
+                "code": 74
+              },
+              {
+                "char": "k",
+                "code": 75
+              },
+              {
+                "char": "l",
+                "code": 76
+              },
+              {
+                "char": ";",
+                "code": 186
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "z",
+                "code": 90
+              },
+              {
+                "char": "x",
+                "code": 88
+              },
+              {
+                "char": "c",
+                "code": 67
+              },
+              {
+                "char": "v",
+                "code": 86
+              },
+              {
+                "char": "b",
+                "code": 66
+              },
+              {
+                "char": "n",
+                "code": 78
+              },
+              {
+                "char": "m",
+                "code": 77
+              },
+              {
+                "char": ",",
+                "code": 188
+              }
+            ]
+          },
+          {
+            "key": [
+              {
+                "char": "",
+                "code": 32
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
