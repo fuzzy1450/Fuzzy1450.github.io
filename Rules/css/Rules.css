@@ -1,0 +1,111 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	height: 2000px;
+}
+
+body{
+	margin: 0px;
+	height: 100%;
+}
+
+h1{
+	font-family: 'Josefin Slab', serif;
+	font-weight: bold;
+	font-size: 128px;
+	text-align: center;
+}
+
+p{
+	font-family: 'Josefin Slab', serif;
+}
+
+.intro{
+	width: 100%;
+	height: 15%;
+}
+
+#intro-text{
+	font-size: 150%;
+	text-align: center;
+	font-weight: bold;
+}
+#Life{
+	font-family: 'Josefin Slab', serif;
+	text-align: center;
+	font-size: 250%;
+	text-decoration: underline;
+}
+
+#header{
+	background-image: url("../images/space.jpg");
+	height: 375px;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+	cursor: context-menu;
+
+}
+
+#header:after {
+    background: linear-gradient(-45deg, #696969 16px, transparent 0), linear-gradient(45deg, #696969 16px, transparent 0);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+	top: 345px;
+}
+
+.center {
+	margin-left: auto;
+    margin-right: auto;
+	width: 100%;
+}
+
+.heading {
+	padding-top: 75px;
+}
+
+#content{
+	position: absolute;
+	top: 300px;
+	width: 100%;
+	height: 2700px;
+	z-index: -1;
+	background-color: #696969;
+}
+
+#marginHere{
+	margin-top: 100px;
+}
+
+.rule{
+	height: 250px;
+	width: 100%;
+}
+
+#num{
+	width:250px;
+	height:auto;
+}
+
+#RuleText{
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+	text-align: center;
+	z-index: -4;
+	font-size: 64px;
+	position: absolute;
+}
