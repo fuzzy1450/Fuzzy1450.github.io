@@ -1,0 +1,588 @@
+/* General */
+@import url(http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT);
+
+.clear {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+html {
+}
+body {
+	background: #f5f2e3 url('pics/body_bg.jpg') repeat-x center top;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font: 12px/1.5 Arial,Helvetica,sans-serif
+}
+div#top {
+	width: 982px;
+	height: 41px;
+	margin: 0 auto;
+}
+div#sides {
+	margin: 0 auto;
+	width: 1006px;
+	background: url('pics/shadow.png') repeat-y;
+	behavior: url('apps/shared/iepngfix.htc');
+}
+div#sidesInner {
+	width: 1006px;
+	background: url('pics/shadowInner.jpg') no-repeat left top;
+}
+div#wrapper {
+	margin: 0 auto;
+	width: 982px;
+	text-align: left;
+}
+.contentIndex, .content {
+	text-align: left;
+	min-height: 400px;
+	height: auto!important;
+	height: 400px;
+	margin: 0 auto;
+}
+.contentIndex {
+	width: 982px;
+	background: url('pics/index_bg.jpg') repeat-y;
+}
+.content {
+	width: 966px;
+	padding: 8px;
+	background: #fff;
+}
+.contentIndex h2 {
+	padding: 0;
+	margin: 0;
+}
+.relative {
+	position: relative;
+}
+.pageTitle {
+	display: block;
+	width: 951px;
+	height: 38px;
+	padding: 7px 0 0 15px;
+	margin-bottom: 10px;
+	font: 21px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	color: #fff;
+	background: url('pics/PageTitle.gif') no-repeat left top;
+}
+#search {
+	float: left;
+	margin: 12px 0 0 0;
+	padding: 0;
+	border: #00412d 2px solid;
+}
+
+#search #q {
+	float: left;
+	width: 145px;
+	height: 13px;
+	border: 0;
+	padding: 2px; 
+	*margin-top: -1px;
+	background: #fff;
+}
+
+#search #sa {
+	float: left;
+}
+#googleTranslate {
+	margin: 0;
+	padding: 0;
+}
+
+#google_translate {
+	float: right;
+	margin: 12px 0 0 0;
+}
+marquee {
+	width: 627px;
+	height: 31px;
+	color: #fff;
+	padding: 5px 2px 0 2px;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+div#marquee {
+	background: url('pics/marquee.png') no-repeat;
+}
+/* Header */
+#header h1 {
+	padding: 0;
+	margin: 0;
+	width: 982px;
+	height: 177px;
+}
+
+#header h1 a {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0 0 177px 982px;
+	overflow: hidden;
+	background: url('pics/header.jpg') no-repeat;
+}
+/* Navigation menu */
+
+div#menu {
+	width: 982px;
+	height: 34px;
+	position: absolute;
+	top: 67px;
+}
+ul#topNavItems {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 973px;
+	position: relative;
+	z-index: 999;
+}
+ul#topNavItems li {
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+	position: relative;
+	z-index: 999;
+}
+ul#topNavItems li.topSep {
+	width: 2px;
+	height: 13px;
+	margin: 12px 1px 0 1px;
+	background: url('pics/topnav_sep.png') no-repeat;
+}
+ul#topNavItems li a {
+	width: 0;
+	white-space: nowrap;
+	height: 29px;
+	display: block;
+	text-align: center;
+	padding: 5px 11px 0 11px;
+	font: 15px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	text-decoration: none;
+	color: #fff;
+}
+ul#topNavItems > li a {
+	width: auto;
+	white-space: normal;
+}
+ul#topNavItems li:hover a, ul#topNavItems li.over a {
+	color: #10492d;
+	background: url('pics/topnavf2.gif') repeat-x;
+}
+
+/* Drop down items */
+
+ul#topNavItems ul, 
+ul#topNavItems li:hover ul ul, ul#topNavItems li.over ul ul, 
+ul#topNavItems li:hover ul ul ul, ul#topNavItems li.over ul ul ul,
+ul#topNavItems li:hover ul ul ul ul, ul#topNavItems li.over ul ul ul ul {
+	position: absolute;
+	left: -9999px;
+	z-index: 9999;
+	width: 184px;
+	margin: 0;
+	padding: 0;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+ul#topNavItems ul li {
+	margin: 0;
+}
+
+
+ul#topNavItems li:hover ul.last{
+	left:-87px !important;
+
+}
+ul#topNavItems li:hover ul, ul#topNavItems li.over ul {
+	left: auto;
+	background: none;
+}
+ul#topNavItems ul li:hover ul, ul#topNavItems ul li.over ul,
+ul#topNavItems ul ul li:hover ul, ul#topNavItems ul ul li.over ul,
+ul#topNavItems ul ul ul li:hover ul, ul#topNavItems ul ul ul li.over ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+/* Drop down items colors and formatting */
+
+ul#topNavItems li:hover ul li a, ul#topNavItems li.over ul li a {
+	line-height: 16pt;
+	text-align: left;
+	text-decoration: none;
+	padding: 6px 5px 5px 8px;
+	height: auto;
+	width: 170px;
+	color: #10492d;
+	background: #e9b63f;
+	font: 14px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	letter-spacing: normal;
+}
+ul#topNavItems li ul li a:hover, 
+ul#topNavItems li ul li:hover a, ul#topNavItems li ul li.over a,
+ul#topNavItems li ul li:hover ul a:hover, ul#topNavItems li ul li.over ul a:hover,
+ul#topNavItems li ul li ul li:hover a, ul#topNavItems li ul li ul li.over a,
+ul#topNavItems li ul li ul li:hover ul a:hover, ul#topNavItems li ul li ul li.over ul a:hover,
+ul#topNavItems li ul li ul li ul li:hover a, ul#topNavItems li ul li ul li ul li.over a,
+ul#topNavItems li ul li ul li ul li:hover ul a:hover, ul#topNavItems li ul li ul li ul li.over ul a:hover {
+	color: #fff;
+	background: #10492d;
+}
+ul#topNavItems li ul li:hover ul a, ul#topNavItems li ul li.over ul a,
+ul#topNavItems li ul li ul li:hover ul a, ul#topNavItems li ul li ul li.over ul a,
+ul#topNavItems li ul li ul li ul li:hover ul a, ul#topNavItems li ul li ul li ul li.over ul a {
+	color: #10492d;
+	background: #e9b63f;
+}
+
+ul#topNavItems > li { background:url("pics/topnav_sep.png") no-repeat right; margin:0 2px!important;}
+ul#topNavItems > li:last-child { background:none!important;}
+ul#topNavItems > li + li + li + li + li + li + li + li + li + li + li { background:none!important;} /* IE7 / IE8 removes separator image for last item */
+
+/* Index properties */
+#indexLeft {
+	width: 631px;
+	float: left;
+}
+#indexBottom {
+	width: 982px;
+	margin: -10px 0 0 0;
+	background: url('pics/contentindex.jpg') no-repeat;
+}
+#leftColumn {
+	width: 208px;
+	padding: 10px 0 0 4px;
+	*padding-top: 20px;
+	float: left;
+}
+#midColumn {
+	width: 440px;
+	padding: 10px 0 0 23px;
+	*padding-top: 20px;
+	float: left;
+}
+#rightColumn {
+	width: 290px;
+	padding: 10px 0 0 17px;
+	*padding-top: 20px;
+	float: left;
+	background: url('pics/right_column_bg.gif') repeat-x left top;
+}
+/* Quicklinks */
+
+#quickLinks {
+	width: 351px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	position: relative;
+	z-index: 10;
+}
+#quickLinks h2 {
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+#quickLinks ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 351px;
+	background: url('pics/quicklinks_bg.gif') no-repeat left top;
+}
+#quickLinks a {
+	width: 246px;
+	height: 48px;
+	text-decoration: none;
+	padding: 25px 0 0 105px;
+	margin: 0;
+	display: block;
+	color: #000;
+	font: 18px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	text-transform: uppercase;
+	text-align: left;
+	letter-spacing: -1px;
+}
+#quickLinks a#midNav1 { background: url('pics/midnav1.jpg') no-repeat left top; }
+#quickLinks a#midNav2 {	background: url('pics/midnav2.jpg') no-repeat left top; }
+#quickLinks a#midNav3 {	background: url('pics/midnav3.jpg') no-repeat left top; }
+#quickLinks a#midNav4 { background: url('pics/midnav4.jpg') no-repeat left top; }
+
+#quickLinks a:hover#midNav1, 
+#quickLinks a:hover#midNav2, 
+#quickLinks a:hover#midNav3, 
+#quickLinks a:hover#midNav4 {
+	background-position: -351px 0;
+	color: #fff;
+}
+/* Left Nav */
+#leftNav {
+	width: 192px;
+	padding: 30px 0 30px 0;
+	margin: 0;
+	background: #038a5f url('pics/leftNavBg.png') no-repeat;
+}
+#leftNav h2 {
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+#leftNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 192px;
+}
+#leftNav a {
+	width: 177px;
+	height: 23px;
+	text-decoration: none;
+	padding: 3px 0 0 15px;
+	margin: 0;
+	display: block;
+	color: #fff;
+	font: 14px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	text-align: left;
+}
+#leftNav a:hover {
+	background: url('pics/leftNavf2.png') repeat-x;
+	color: #003223;
+}
+#leftNav ul li.leftNavSep {
+	width: 192px;
+	height: 2px;
+	margin: 0;
+	padding: 0;
+	background: url('pics/leftNavSep.png') no-repeat left top;
+	font-size: 0;
+	line-height: 0;
+}
+/* Homepage Section Headers */
+
+.contentIndex h2 a {
+	width: auto;
+	height: 0;
+	font: 16px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+#midColumn h2 a {
+	width: 412px;
+	height: 28px;
+	padding: 4px 0 0 0;
+	background: url('pics/mid_section_header.png') no-repeat left top;
+	behavior: url('apps/shared/iepngfix.htc');
+}
+#rightColumn h2 a {
+	width: 269px;
+	height: 28px;
+	padding: 4px 0 0 0;
+	background: url('pics/right_section_header.png') no-repeat left top;
+	behavior: url('apps/shared/iepngfix.htc');
+}
+/* Homepage Sections Containers */
+.contentIndex .container {
+	padding: 10px;
+}
+#midColumn .container {
+	width: 392px;
+}
+#rightColumn .container {
+	width: 249px;
+}
+/* Homepage Section Table Includes */
+
+.HPNews {
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+.HPEvents {
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+.HPBBMessages {
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+/* Other homepage section extras */
+
+.HPNews a, .HPNews a:active, .HPNews a:link, .HPNews a:visited, 
+.HPBBMessages a, .HPBBMessages a:active, .HPBBMessages a:link, .HPBBMessages a:visited,
+.HPEvents a, .HPEvents a:active, .HPEvents a:link, .HPEvents a:visited {
+	color: #000;
+}
+/*.HPNews #l, .HPEvents #l, .HPBBMessages #l {
+	display: none;
+}*/ 
+td#r {
+	padding: 0 0 10px; 
+}
+.HPNews #l img, .HPEvents #l img, .HPBBMessages #l img {
+	margin-top: 5px; 
+}
+/* Image shuffles */
+
+#shuffle1 {
+	width: 631px;
+	height: 246px;
+}
+#slogan {
+	position: absolute;
+	left: 150px;
+	top: 210px;
+	color: #fff;
+	font: 28px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+	letter-spacing: -0.7px;
+	text-shadow: 1px 1px 1px #000;
+}
+/* Footer */
+
+div#footer {
+	width: 1006px;
+	height: 151px;
+	margin: 0 auto;
+	text-align: left;
+	background: url('pics/footer.png') no-repeat;
+}
+div#footerShadow {
+	width: 1006px;
+	height: 30px;
+	background: url('pics/footer_shadow.gif') no-repeat top;
+	margin: 0 auto;
+	padding: 7px 0 0 0;
+}
+address {
+	text-align: left;
+	color: #fff;
+	padding: 0;
+	position: absolute;
+	top: 120px;
+	left: 40px;
+	font: 14px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+}
+a#edunet {
+	width: 245px;
+	height: 0;
+	padding: 22px 0 0 0;
+	margin: 0;
+	overflow: hidden;
+	display: block;
+	background: url('pics/edunet_opaque.png') no-repeat;
+	behavior: url('apps/shared/iepngfix.htc');
+}
+#edu_logo {
+	width: 245px;
+	margin: 0 auto;
+}
+/* Page Navigation */
+#pageNav {
+	border: 0;
+}
+
+#pageNav ul, #pageNav ul li {
+	list-style: none;
+	line-height: 16px;
+}
+
+#pageNav ul {
+	padding: 0!important;
+	margin: 0 auto !important;
+	width: 250px;
+	background: #012c1e;
+	border: 1px solid #294d41;
+}
+
+#pageNav ul li {
+	display: block;
+	padding: 0!important;
+	margin: 0 !important;
+	font-size: 12px;
+	zoom: 1; /* this is important for IE6 */
+	font: 14px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+}
+
+#pageNav td {
+	padding: 2px;
+	background: #012c1e;
+}
+
+#pageNav td img {
+	display: none;
+}
+
+#pageNav ul li b {
+	font-weight: bold;
+	color: #012c1e !important;
+	background: #b7b18c;
+	padding: 5px 0 5px 14px;
+	display: block;
+}
+
+#pageNav ul li a {
+	color: #fff;
+	padding: 5px 0 5px 14px;
+	display: block;
+	text-decoration: none;
+	font: 14px "OFL Sorts Mill Goudy TT", Georgia, Times New Roman, serif;
+}
+#pageNav ul li a:hover {
+	color: #012c1e;
+	background: #e9b541;
+}
+.JoeVirtualTour {
+
+}
+
+
+
+.dark {
+    background-color: #003B29 !important;
+    color: #FFFFFF !important;
+}
+.light {
+    background-color: #FDFAFA !important;
+}
+.dark a, .dark a:visited, .dark a:link, .dark a:hover, .dark a:active {
+    color: #FFFFFF !important;
+}
+
+#sociallinks {width:215px; height:40px; position:absolute; top:163px; margin-left:770px; }
+#sociallinks a {width:35px; height:35px; margin:0 5px; position:absolute;}
+#sociallinks a.fb {background:url('pics/fb.png') no-repeat; left:5px; top:3px;}
+#sociallinks a.tw {background:url('pics/tw.png') no-repeat; left:45px; top:3px;}
+#sociallinks a.ig {background:url('pics/ig.png') no-repeat; left:85px; top:3px;}
+#sociallinks a.gp {background:url('pics/gp.png') no-repeat; left:125px; top:3px;}
+#sociallinks a.yt {background:url('pics/yt.png') no-repeat; left:165px; top:3px;}
+
+#marquee2490 {color:#000;font-family: "Calisto MT","serif";
+    font-size: 14pt;}
+
+#hedaer-ph {position:absolute; top:123px; margin-left:810px; font:26px "OFL Sorts Mill Goudy TT",Georgia,Times New Roman,serif; color: #fff;}
+
+#sitemap-footer { bottom: -138px;color: #fff;position: absolute;right: 26px;z-index: 9999; color:#fff; }
+a#sitemap-footer:hover { text-decoration:none; }
+a#footer-home-link { text-indent:-9999em; position:absolute; left:0px; top:20px; display:block; height:125px; width:954px; }
+
+
+
