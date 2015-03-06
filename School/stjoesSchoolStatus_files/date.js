@@ -116,4 +116,4 @@ tomorrow= Days[z] + ", " + Months[a] + " " + b + ending;
 bigTomorrow= Days[z] + " " + Months[a] + " " + b + ending;
 
 document.getElementById("bigDate").innerHTML = "NO CLASSES ON " + bigTomorrow.toUpperCase();
-document.getElementById("dateHere").innerHTML = "Due to the pure speculation of snow, ice, fog, rain, leafs, and other hazardous obstacles, SJHS will not have classes on" + tomorrow;
+document.getElementById("dateHere").innerHTML = "Due to the pure speculation of snow, ice, fog, rain, leafs, and other hazardous obstacles, SJHS will not have classes on " + tomorrow;
