@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="32"
+   height="32"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient12379">
+      <stop
+         id="stop12381"
+         style="stop-color:#ffe680;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop12383"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient18566">
+      <stop
+         id="stop18568"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop18570"
+         style="stop-color:#ffffff;stop-opacity:0.90196079"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="15"
+       y1="1025.3622"
+       x2="15"
+       y2="1040.3622"
+       id="linearGradient18572"
+       xlink:href="#linearGradient18566"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="15"
+       y1="30"
+       x2="15"
+       y2="21"
+       id="linearGradient12385"
+       xlink:href="#linearGradient12379"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="13"
+       y1="1050.3622"
+       x2="13"
+       y2="1041.3622"
+       id="linearGradient12387"
+       xlink:href="#linearGradient12379"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-1020.3622)"
+     id="layer1"
+     style="display:inline">
+    <path
+       d="M 11.152001,1.4426629 2.5186634,13.619997 29,14 19.898666,1.5066701 z"
+       transform="translate(0,1020.3622)"
+       id="path4994"
+       style="fill:url(#linearGradient12385);fill-opacity:1;stroke:none" />
+    <path
+       d="m 19.75,1021.3312 -8.5,0.031 -0.25,0 -0.15625,0.1874 -8.6875,11.9813 -0.125,0.1563 0,0.1563 0,1.1562 0,0.5312 0.53125,0 25.96875,0.063 0.53125,0 0,-0.5313 0,-1.1875 0,-0.1562 -0.09375,-0.1563 -8.78125,-12.0126 -0.15625,-0.2187 -0.28125,0 z m -0.3125,1.0313 8.59375,11.7 -0.03125,0.4687 -24.90625,-0.062 0,-0.4688 8.4375,-11.6063 7.90625,-0.031 z"
+       id="path3975"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04928792px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+    <g
+       id="layer2"
+       style="display:none">
+      <g
+         transform="translate(14.189645,0)"
+         id="g3389"
+         style="display:inline">
+        <rect
+           width="3.8514752"
+           height="3.4967341"
+           x="26.453552"
+           y="1042.4801"
+           id="rect3370"
+           style="fill:#ffffff" />
+        <rect
+           width="1.9257376"
+           height="3.4967341"
+           x="22.399368"
+           y="1047.8013"
+           id="rect3372"
+           style="fill:#ffffff" />
+        <g
+           transform="translate(-14.240322,0.60812767)"
+           id="g3364">
+          <rect
+             width="2.2804787"
+             height="5.0254993"
+             x="37.146465"
+             y="1034.1141"
+             id="rect3346" />
+          <rect
+             width="9.1725922"
+             height="2.331156"
+             x="37.146465"
+             y="1042.4801"
+             id="rect3348" />
+          <rect
+             width="0.96286881"
+             height="13.277469"
+             x="37.146465"
+             y="1038.578"
+             id="rect3350" />
+          <rect
+             width="0.96286881"
+             height="8.2604008"
+             x="45.35619"
+             y="1043.595"
+             id="rect3352" />
+        </g>
+      </g>
+    </g>
+    <path
+       d="m 2.0270407,1033.6875 c 9.0205603,0 17.9523993,0 26.9729593,0 0,5.5576 0,11.1152 0,16.6728 -9.02056,0 -17.952399,0 -26.9729593,0 0,-5.5576 0,-11.1152 0,-16.6728 z"
+       id="rect3947" />
+    <path
+       d="m 2.9655449,1034.6003 c 8.3541261,0 16.6195311,0 24.9736571,0 0,4.9369 0,9.8737 0,14.8105 -8.354126,0 -16.619531,0 -24.9736571,0 0,-4.9368 0,-9.8736 0,-14.8105 z"
+       id="rect3949"
+       style="fill:url(#linearGradient12387);fill-opacity:1" />
+    <path
+       d="m 5.1595851,1024.6214 0,11.5938 5.9062499,4.7187 9.125,0 5.5,-4.4375 0,-11.875 z"
+       id="rect3951" />
+    <path
+       d="m 6.1075378,1025.5257 18.6770382,0 0,12.2813 -3.784576,3.5552 -10,0 -4.9431292,-3.8592 z"
+       id="rect3953"
+       style="fill:url(#linearGradient18572);fill-opacity:1" />
+    <path
+       d="m 2.4831365,1034.6204 8.3617555,6.7701 9.503748,0 8.108368,-6.565"
+       id="path3955"
+       style="fill:none;stroke:#000000;stroke-width:0.89980739px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 2.6351684,1049.1441 7.7029506,-7.703 10.135461,0 7.753627,7.7537"
+       id="path3957"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       width="6"
+       height="0.99997663"
+       x="8.0253334"
+       y="1027.3755"
+       id="rect3998"
+       style="fill:#808080" />
+    <rect
+       width="15"
+       height="0.99997663"
+       x="8.0253334"
+       y="1030.3755"
+       id="rect4000"
+       style="fill:#808080" />
+    <rect
+       width="15"
+       height="0.99994189"
+       x="8.0253334"
+       y="1033.3755"
+       id="rect4002"
+       style="fill:#808080" />
+    <rect
+       width="6.999999"
+       height="0.99994189"
+       x="16.02668"
+       y="1036.3608"
+       id="rect4006"
+       style="fill:#808080" />
+  </g>
+</svg>

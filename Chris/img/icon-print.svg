@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="32"
+   height="32"
+   id="svg14643">
+  <defs
+     id="defs14645">
+    <linearGradient
+       id="linearGradient22195">
+      <stop
+         id="stop22197"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop22199"
+         style="stop-color:#ffffff;stop-opacity:0.90196079"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="12"
+       y1="3"
+       x2="12"
+       y2="8"
+       id="linearGradient9643"
+       xlink:href="#linearGradient22195"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1428572,0,0,1.1999999,2.8571426,4.4000001)" />
+  </defs>
+  <metadata
+     id="metadata14648">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <rect
+       width="44"
+       height="30"
+       x="-45"
+       y="0"
+       id="rect10345"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <path
+       d="m 7,18 18,0 0,1 -18,0 z"
+       id="rect21673"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       d="m 7,19 4,0 0,2 -4,0 z"
+       id="rect21677"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 7,12 18,0 0,6 -18,0 z"
+       id="rect21675"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 11,12 10,0 0,3.039198 -10,0 z"
+       id="rect21667"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <path
+       d="m 12,8 8,0 0,6 -8,0 z"
+       id="rect21669"
+       style="fill:url(#linearGradient9643);fill-opacity:1;stroke:none" />
+    <path
+       d="m 8,13 2,0 0,2.03136 -2,0 z"
+       id="rect21671"
+       style="fill:#0000ff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 11,19 10,0 0,2 -10,0 z"
+       id="rect21681"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <path
+       d="m 21,19 4,0 0,2 -4,0 z"
+       id="rect21685"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 11,21 10,0 0,2 -10,0 z"
+       id="rect22203"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+  </g>
+</svg>
