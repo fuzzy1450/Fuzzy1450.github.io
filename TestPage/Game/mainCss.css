@@ -1,0 +1,19 @@
+html{
+	margin:0px;
+	width:100%;
+	overflow:auto;
+}
+
+body{
+	margin:0px;
+	padding-top:0px;
+	width:100%;
+	min-height:100%;
+	overflow:auto;
+}
+
+#header{
+	width:100%;
+	height:80px;
+	text-align:center;
+}
