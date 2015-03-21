@@ -17,3 +17,42 @@ body{
 	height:80px;
 	text-align:center;
 }
+
+#Frame{
+	height:506px;
+	width:95.5%;
+	margin-left:2.25%;
+	margin-right:2.25%;
+}
+
+.Row{
+	width:31%;
+	height:500px;
+	border-style: solid;
+    border-color: #5CADFF;
+	margin:0px;
+	margin-right:0px;
+	position:absolute;
+}
+
+#secRow{
+	left:34%;
+}
+	
+#trdRow{
+	left:66%;
+}
+
+#mainClick{
+	margin-top:25%;
+	margin-left:15%;
+	width:150px;
+	height:150px;
+	cursor:pointer;
+	position:absolute
+}
+
+#mainButton{
+	width:150px;
+	height:150px;
+}
