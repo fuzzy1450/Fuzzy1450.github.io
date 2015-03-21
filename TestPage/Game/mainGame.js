@@ -30,7 +30,7 @@ function saveGame(){ //save all stats as cookies
 setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds
 
 function checkCookies(){ //check if cookies exist
-	if(getCookie("DoNotChange")===true){
+	if(getCookie("DoNotChange")==="true"){
 		loadGame();
 	}
 }
