@@ -20,6 +20,9 @@ function refreshScreen(){ //function containing all bits that become replaced
 }
 setInterval(refreshScreen, refreshRate); //Interval to refresh screen elements
 
-function saveGame(){
-	document.cookie=("userVars=" + userVars +";");
+function saveGame(){ //save all stats as cookies
+	document.cookie=("Kaching=" + userVars.Kaching + ";");
+	document.cookie=("tickTime=" + userVars.tickTime + ";");
+	document.cookie=("autoIncrement=" + userVars.autoIncrement + ";");
+	document.cookie=("clickIncrement=" + userVars.clickIncrement + ";");
 }
