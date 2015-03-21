@@ -25,6 +25,31 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("tickTime=" + userVars.tickTime + ";");
 	document.cookie=("autoIncrement=" + userVars.autoIncrement + ";");
 	document.cookie=("clickIncrement=" + userVars.clickIncrement + ";");
-	document.cookie=("Played=true;"); //User has been on before
+	document.cookie=("DoNotChange=true;"); //User has been on before
 }
 setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds
+
+function checkCookies(){ //check if cookies exist
+	if(getCookie(DoNotChange)===true){
+		loadGame();
+	}
+}
+
+function getCookie(cname) { //look for Cookie with given name
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function loadGame(){
+	userVars.Kaching = getCookie("Kaching");
+	userVars.tickTime = getCookie("tickTime");
+	userVars.autoIncrement = getCookie("autoIncrement");
+	userVars.clickIncrement = getCookie("clickIncrement");
+}
+window.onload = checkCookies;
