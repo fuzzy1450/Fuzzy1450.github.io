@@ -25,4 +25,6 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("tickTime=" + userVars.tickTime + ";");
 	document.cookie=("autoIncrement=" + userVars.autoIncrement + ";");
 	document.cookie=("clickIncrement=" + userVars.clickIncrement + ";");
+	document.cookie=("Played=true;"); //User has been on before
 }
+setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds
