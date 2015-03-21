@@ -47,9 +47,9 @@ function getCookie(cname) { //look for Cookie with given name
 }
 
 function loadGame(){
-	userVars.Kaching = getCookie("Kaching");
-	userVars.tickTime = getCookie("tickTime");
-	userVars.autoIncrement = getCookie("autoIncrement");
-	userVars.clickIncrement = getCookie("clickIncrement");
+	userVars.Kaching = parseInt(getCookie("Kaching"));
+	userVars.tickTime = parseInt(getCookie("tickTime"));
+	userVars.autoIncrement = parseInt(getCookie("autoIncrement"));
+	userVars.clickIncrement = parseInt(getCookie("clickIncrement"));
 }
 window.onload = checkCookies;
