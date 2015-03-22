@@ -60,13 +60,15 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("lastVersion=" + userVars.lastVersion + ";");
 	
 }
-setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds
+
 
 function checkCookies(){ //check if cookies exist
 	if(getCookie("DoNotChange")==="true"){
 		loadGame();
 	}
 }
+setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds. Has to be after checkCookies because Javascript executes as it compiles. Joy.
+
 
 function getCookie(cname) { //look for Cookie with given name
     var name = cname + "=";
