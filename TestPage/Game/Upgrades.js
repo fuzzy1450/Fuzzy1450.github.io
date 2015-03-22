@@ -1,15 +1,5 @@
 //File Containing Upgrades
 
-function sleep(milliseconds) { //simulates sleep
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-sleep(1000); //sleep for a second while the page loads. because javascript runs AS it complies. yay.
-
 Upgrades=[]; //Declaring array
 
 //Upgrade Objects
@@ -21,7 +11,7 @@ ClickUp1={
 	onBuy:"ClickUp1",
 	require:false,
 	icon:"UpgImgs/ClickUp1.svg",
-	bought:userVars.ClickUp1	
+	bought:getCookie("ClickUp1");	
 }
 
 TicTime1={
@@ -31,7 +21,7 @@ TicTime1={
 	onBuy:"TicTime1",
 	require:50,
 	icon:"UpgImgs/TicTime1.svg",
-	bought:userVars.TicTime1
+	bought:getCookie("TicTime1");
 	
 }
 
@@ -92,3 +82,4 @@ function buyUpgrade(name){ //buy an upgrade
 			break;
 	}
 }
+
