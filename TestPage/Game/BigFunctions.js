@@ -12,3 +12,7 @@ function getCookie(cname) { //look for Cookie with given name
 };
 
 refreshRate=1000; // milliseconds for html to show changes. Set to 1 seconds. Change this if you think your computer can handle it.
+
+function Pro(){
+	document.getElementById("ProClickers").style.display='block';
+}
