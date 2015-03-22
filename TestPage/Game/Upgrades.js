@@ -11,7 +11,7 @@ ClickUp1={
 	onBuy:"ClickUp1",
 	require:false,
 	icon:"UpgImgs/ClickUp1.svg",
-	bought:getCookie("ClickUp1");	
+	bought:getCookie("ClickUp1")	
 }
 
 TicTime1={
@@ -21,7 +21,7 @@ TicTime1={
 	onBuy:"TicTime1",
 	require:50,
 	icon:"UpgImgs/TicTime1.svg",
-	bought:getCookie("TicTime1");
+	bought:getCookie("TicTime1")
 	
 }
 
