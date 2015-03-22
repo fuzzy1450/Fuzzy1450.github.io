@@ -7,12 +7,12 @@ Structures=[]; //Declaring array
 Pointer={
 	name:"Pointer",
 	description:"+1 $/t",
-	cost:userVars.PointerCost,
+	cost:15,
 	onBuy:"Pointer",
 	require:0,
 	icon:"StrucImgs/Pointer.svg",
-	bought:userVars.Pointer,
-	owned:userVars.PointerOwned
+	bought:false,
+	owned:0
 }
 
 

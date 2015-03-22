@@ -97,6 +97,10 @@ function loadGame(){
 		userVars.Pointer = getCookie("Pointer");
 		userVars.PointerOwned = parseInt(getCookie("PointerOwned"));
 		userVars.PointerCost = parseInt(getCookie("PointerCost"));
+		
+		Pointer.bought = getCookie("Pointer");
+		Pointer.owned = parseInt(getCookie("PointerOwned"));
+		Pointer.cost = parseInt(getCookie("PointerCost"));
 	} //This if must be in every update. Thanks, Javascript
 	
 	
