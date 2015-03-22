@@ -53,7 +53,7 @@ function getCookie(cname) { //look for Cookie with given name
         while (c.charAt(0)==' ') c = c.substring(1);
         if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
     }
-    return "";
+    return false;
 }
 
 function loadGame(){
@@ -62,8 +62,8 @@ function loadGame(){
 	userVars.autoIncrement = parseInt(getCookie("autoIncrement"));
 	userVars.clickIncrement = parseInt(getCookie("clickIncrement"));
 	userVars.maxKaching = parseInt(getCookie("maxKaching"));
-	userVars.ClickUp1 = getCookie("ClickUp1")
-	userVars.TicTime1 = getCookie("TicTime1")
+	userVars.ClickUp1 = getCookie("ClickUp1");
+	userVars.TicTime1 = getCookie("TicTime1");
 }
 window.onload = checkCookies
 
