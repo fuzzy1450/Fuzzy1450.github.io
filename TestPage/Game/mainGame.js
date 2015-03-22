@@ -19,8 +19,6 @@ userVars ={
 	PointerCost:15
 }
 
-//Permanent Variables
-refreshRate=1000; // milliseconds for html to show changes. Set to 1 seconds. Change this if you think your computer can handle it.
 
 function incrementKaching(){ //increase the money count by the auto increment
 	userVars.Kaching=userVars.Kaching + userVars.autoIncrement;
@@ -69,17 +67,6 @@ function checkCookies(){ //check if cookies exist
 }
 setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds. Has to be after checkCookies because Javascript executes as it compiles. Joy.
 
-
-function getCookie(cname) { //look for Cookie with given name
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return false;
-}
 
 function loadGame(){
 	userVars.Kaching = parseInt(getCookie("Kaching"));
