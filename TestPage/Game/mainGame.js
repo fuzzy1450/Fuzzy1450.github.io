@@ -1,3 +1,5 @@
+versionNumber =0.1; //Current Version. IMPORTANT: CAN ONLY HAVE ONE DECIMAL, NEEDS TO BE NUMBER
+
 //User variables
 userVars ={
 	clickIncrement:1, // Currency gained on click
@@ -5,7 +7,7 @@ userVars ={
 	tickTime:2000, // Milliseconds it takes to add AutoIncrement
 	Kaching:0, // Currency
 	maxKaching:0, // The highest amount of money held by the player at once
-	
+	lastVersion:0, // A version record, helps with cookies
 	
 	//Holy Bought Upgrades, Batman!
 	ClickUp1: false,
@@ -53,6 +55,10 @@ function saveGame(){ //save all stats as cookies
 	
 	document.cookie=("DoNotChange=true;"); //User has been on before
 	
+	//Update and store version number
+	userVars.lastVersion=versionNumber;
+	document.cookie=("lastVersion=" + userVars.lastVersion + ";");
+	
 }
 setInterval(saveGame, 30000); //Interval to save game to cookies, every 30 seconds
 
@@ -85,9 +91,13 @@ function loadGame(){
 	userVars.TicTime1 = getCookie("TicTime1");
 	
 	//Structures
-	userVars.Pointer = getCookie("Pointer");
-	userVars.PointerOwned = parseInt(getCookie("PointerOwned"));
-	userVars.PointerCost = parseInt(getCookie("PointerCost"));
+	if(getCookie("lastVarsion">=0.1){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
+		userVars.Pointer = getCookie("Pointer");
+		userVars.PointerOwned = parseInt(getCookie("PointerOwned"));
+		userVars.PointerCost = parseInt(getCookie("PointerCost"));
+	} //This if must be in every update. Thanks, Javascript
+	
+	
 }
 window.onload = checkCookies;
 
