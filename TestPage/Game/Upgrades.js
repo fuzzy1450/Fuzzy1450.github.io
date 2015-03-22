@@ -1,4 +1,4 @@
-//File Containing Upgrades
+//File Containing Upgrades, looks a lot like Structures.js
 
 Upgrades=[]; //Declaring array
 
@@ -9,7 +9,7 @@ ClickUp1={
 	description:"Upgrades the money gained per click by 1",
 	cost:50,
 	onBuy:"ClickUp1",
-	require:false,
+	require:10,
 	icon:"UpgImgs/ClickUp1.svg",
 	bought:getCookie("ClickUp1")	
 }

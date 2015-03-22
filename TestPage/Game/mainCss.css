@@ -104,3 +104,42 @@ body{
 	width:150px;
 	float:right;
 }
+
+.Structure{
+	height:90px;
+	width:90%;
+	border:groove;
+	border-width:3px;
+	border-color:#CFCF00;
+	margin-left:10px;
+	margin-right:10px;
+	overflow:hidden;
+	margin-bottom: 3px;
+}
+
+#StructureOverlay{
+	min-height:90px;
+}
+	
+
+#StructureImg{
+	width:90px;
+    height:100%;
+	margin-right:5px;
+	float:left;
+}
+
+#StructureTitle{
+	text-align:center;
+	margin-top:3px;
+	margin-bottom:0px;
+	width:150px;
+	margin-left:80px;
+	font-size:18px;
+}
+
+#StructureDescription{
+	font-size:14px;
+	width:150px;
+	float:right;
+}

@@ -9,13 +9,21 @@ userVars ={
 	
 	//Holy Bought Upgrades, Batman!
 	ClickUp1: false,
-	TicTime1: false
+	TicTime1: false,
+	
+	//Structures, so they dont collapse
+	Pointer:false,
+	PointerOwned:0,
+	PointerCost:15
 }
 
 //Permanent Variables
-refreshRate=1000; // milliseconds for html to increment. Set to 1 seconds. Change this if you are daring
+refreshRate=1000; // milliseconds for html to show changes. Set to 1 seconds. Change this if you think your computer can handle it.
 
-
+function incrementKaching(){ //increase the money count by the auto increment
+	userVars.Kaching=userVars.Kaching + userVars.autoIncrement;
+}
+setInterval(incrementKaching, userVars.tickTime); //run incrementKaching every ticTime milliseconds 
 
 function bigButton(){ //The Big Button that is clicked
 	userVars.Kaching=userVars.Kaching+userVars.clickIncrement;
@@ -32,8 +40,17 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("autoIncrement=" + userVars.autoIncrement + ";");
 	document.cookie=("clickIncrement=" + userVars.clickIncrement + ";");
 	document.cookie=("maxKaching=" + userVars.maxKaching + ";");
-	document.cookie=("ClickUp1=" + userVars.ClickUp1 + ";");
+	
+	//Upgrades
+	document.cookie=("ClickUp1=" + userVars.ClickUp1 + ";");	
 	document.cookie=("TicTime1=" + userVars.TicTime1 + ";");
+	
+	//Structures
+	document.cookie=("Pointer=" + userVars.Pointer + ";");
+	document.cookie=("PointerOwned=" + userVars.PointerOwned + ";");
+	document.cookie=("PointerCost=" + userVars.PointerCost + ";");
+	
+	
 	document.cookie=("DoNotChange=true;"); //User has been on before
 	
 }
@@ -62,8 +79,15 @@ function loadGame(){
 	userVars.autoIncrement = parseInt(getCookie("autoIncrement"));
 	userVars.clickIncrement = parseInt(getCookie("clickIncrement"));
 	userVars.maxKaching = parseInt(getCookie("maxKaching"));
+	
+	//Upgrades
 	userVars.ClickUp1 = getCookie("ClickUp1");
 	userVars.TicTime1 = getCookie("TicTime1");
+	
+	//Structures
+	userVars.Pointer = getCookie("Pointer");
+	userVars.PointerOwned = parseInt(getCookie("PointerOwned"));
+	userVars.PointerCost = parseInt(getCookie("PointerCost"));
 }
 window.onload = checkCookies;
 
