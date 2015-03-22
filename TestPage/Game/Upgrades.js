@@ -1,30 +1,40 @@
 //File Containing Upgrades
 
+function sleep(milliseconds) { //simulates sleep
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+sleep(1000); //sleep for a second while the page loads. because javascript runs AS it complies. yay.
+
 Upgrades=[]; //Declaring array
 
 //Upgrade Objects
-function declareUpgrades(){ //function for convenience
-	ClickUp1={
-		name:"Clicker Upgrade",
-		description:"Upgrades the money gained per click by 1",
-		cost:50,
-		onBuy:"ClickUp1",
-		require:false,
-		icon:"UpgImgs/ClickUp1.svg",
-		bought:userVars.ClickUp1
-	}
 
-	TicTime1={
-		name:"Lower Tick Time",
-		description:"Reduces the time it takes to receive money from structures",
-		cost:100,
-		onBuy:"TicTime1",
-		require:50,
-		icon:"UpgImgs/TicTime1.svg",
-		bought:userVars.TicTime1
-	}
+ClickUp1={
+	name:"Clicker Upgrade",
+	description:"Upgrades the money gained per click by 1",
+	cost:50,
+	onBuy:"ClickUp1",
+	require:false,
+	icon:"UpgImgs/ClickUp1.svg",
+	bought:userVars.ClickUp1	
 }
-window.onload = declareUpgrades;
+
+TicTime1={
+	name:"Lower Tick Time",
+	description:"Reduces the time it takes to receive money from structures",
+	cost:100,
+	onBuy:"TicTime1",
+	require:50,
+	icon:"UpgImgs/TicTime1.svg",
+	bought:userVars.TicTime1
+	
+}
+
 
 
 //Push Upgrades Into Array
