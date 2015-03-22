@@ -34,7 +34,7 @@ function addStructures(){ //needs to be a function so it can be run through mult
 			newDiv.title=("Cost: $" + Structures[i].cost);
 			document.getElementById('Structures').appendChild(newDiv); //add in Structure div
 
-			newDiv.innerHTML=("<div id='StructureOverlay' onclick=buyStructure('" + Structures[i].onBuy + "');><img src='" + Structures[i].icon + "' id='StructureImg'><p id='StructureTitle'>" + Structures[i].name + "</p><p id='StructureDescription'>" + Structures[i].description + "</p></div>"); //all the magic code. What does any of it mean? I don't know anymore.
+			newDiv.innerHTML=("<div id='StructureOverlay' onclick=buyStructure('" + Structures[i].onBuy + "');><img src='" + Structures[i].icon + "' id='StructureImg'><p id='StructureTitle'>" + Structures[i].name + "</p><p id='StructureDescription'>" + Structures[i].description + "<br> Owned: " + Pointer.owned + "</p></div>"); //all the magic code. What does any of it mean? I don't know anymore.
 			Structures[i].shown=true;
 		}
 	
@@ -55,6 +55,7 @@ function buyStructure(name){ //buy a structure
 				Pointer.owned++;
 				userVars.Kaching-=Pointer.cost;
 				Pointer.cost=Math.round(Pointer.cost * 1.15);
+				userVars.PointerCost=Pointer.cost;
 				document.getElementById('Pointer').title=("Cost: $" + Pointer.cost);
 				document.getElementById("Pointer").childNodes[0].children[2].innerHTML=(Pointer.description + "<br> Owned: " + Pointer.owned);
 
