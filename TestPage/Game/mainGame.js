@@ -91,7 +91,7 @@ function loadGame(){
 	userVars.TicTime1 = getCookie("TicTime1");
 	
 	//Structures
-	if(getCookie("lastVarsion">=0.1){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
+	if(getCookie("lastVarsion">=0.1)){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
 		userVars.Pointer = getCookie("Pointer");
 		userVars.PointerOwned = parseInt(getCookie("PointerOwned"));
 		userVars.PointerCost = parseInt(getCookie("PointerCost"));
