@@ -3,26 +3,28 @@
 Upgrades=[]; //Declaring array
 
 //Upgrade Objects
-ClickUp1={
-	name:"Clicker Upgrade",
-	description:"Upgrades the money gained per click by 1",
-	cost:50,
-	onBuy:"ClickUp1",
-	require:false,
-	icon:"UpgImgs/ClickUp1.svg",
-	bought:userVars.ClickUp1
-}
+function declareUpgrades(){ //function for convenience
+	ClickUp1={
+		name:"Clicker Upgrade",
+		description:"Upgrades the money gained per click by 1",
+		cost:50,
+		onBuy:"ClickUp1",
+		require:false,
+		icon:"UpgImgs/ClickUp1.svg",
+		bought:userVars.ClickUp1
+	}
 
-TicTime1={
-	name:"Lower Tick Time",
-	description:"Reduces the time it takes to receive money from structures",
-	cost:100,
-	onBuy:"TicTime1",
-	require:50,
-	icon:"UpgImgs/TicTime1.svg",
-	bought:userVars.TicTime1
+	TicTime1={
+		name:"Lower Tick Time",
+		description:"Reduces the time it takes to receive money from structures",
+		cost:100,
+		onBuy:"TicTime1",
+		require:50,
+		icon:"UpgImgs/TicTime1.svg",
+		bought:userVars.TicTime1
+	}
 }
-
+window.onload = declareUpgrades;
 
 
 //Push Upgrades Into Array
@@ -36,7 +38,7 @@ function addUpgrades(){ //needs to be a function so it can be run through multip
 	i=0;
 	while(i!=Upgrades.length){
 		
-		if((userVars.maxKaching>=Upgrades[i].require)&&(Upgrades[i].shown!=true)&&(Upgrades[i].bought!=true)){ //if the user has had enough money to display upgrade
+		if((userVars.maxKaching>=Upgrades[i].require)&&(Upgrades[i].shown!=true)&&(Upgrades[i].bought!="true")){ //if the user has had enough money to display upgrade
 			var newDiv=document.createElement('div');
 			newDiv.className="Upgrade";
 			newDiv.id=Upgrades[i].onBuy;

@@ -65,7 +65,7 @@ function loadGame(){
 	userVars.ClickUp1 = getCookie("ClickUp1");
 	userVars.TicTime1 = getCookie("TicTime1");
 }
-window.onload = checkCookies
+window.onload = checkCookies;
 
 function checkForMax(){ // Check if you should increase the MaxKaching 
 	if(userVars.Kaching>userVars.maxKaching){
