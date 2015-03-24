@@ -6,12 +6,13 @@ Structures=[]; //Declaring array
 
 Pointer={
 	name:"Pointer",
-	description:"+1 $/t",
+	description:"+1 Nan/t",
 	cost:15,
 	onBuy:"Pointer",
 	require:0,
 	icon:"StrucImgs/Pointer.svg",
 	bought:false,
+	power:1,
 	owned:0
 }
 
@@ -31,7 +32,7 @@ function addStructures(){ //needs to be a function so it can be run through mult
 			var newDiv=document.createElement('div');
 			newDiv.className="Structure";
 			newDiv.id=Structures[i].onBuy;
-			newDiv.title=("Cost: $" + Structures[i].cost);
+			newDiv.title=("Cost: $" + Structures[i].cost + " Nans");
 			document.getElementById('Structures').appendChild(newDiv); //add in Structure div
 
 			newDiv.innerHTML=("<div id='StructureOverlay' onclick=buyStructure('" + Structures[i].onBuy + "');><img src='" + Structures[i].icon + "' id='StructureImg'><p id='StructureTitle'>" + Structures[i].name + "</p><p id='StructureDescription'>" + Structures[i].description + "<br> Owned: " + Pointer.owned + "</p></div>"); //all the magic code. What does any of it mean? I don't know anymore.
@@ -48,7 +49,7 @@ function buyStructure(name){ //buy a structure
 	switch(name){ //the switch is real. I know there is a better way to do this. There must be.
 		case "Pointer":
 			if(userVars.Kaching>=Pointer.cost){
-				userVars.autoIncrement++;
+				userVars.autoIncrement=userVars.autoIncrement+Pointer.power;
 				userVars.Pointer=true;
 				userVars.PointerOwned++;
 				Pointer.bought=true;

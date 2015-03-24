@@ -6,7 +6,7 @@ Upgrades=[]; //Declaring array
 
 ClickUp1={
 	name:"Clicker Upgrade",
-	description:"Upgrades the money gained per click by 1",
+	description:"Upgrades the Nans gained per click by 1",
 	cost:50,
 	onBuy:"ClickUp1",
 	require:10,
@@ -16,7 +16,7 @@ ClickUp1={
 
 TicTime1={
 	name:"Lower Tick Time",
-	description:"Reduces the time it takes to receive money from structures",
+	description:"Reduces the time it takes to receive Nans from structures",
 	cost:100,
 	onBuy:"TicTime1",
 	require:50,
@@ -25,11 +25,23 @@ TicTime1={
 	
 }
 
+PointerUp1={
+	name:"Double Pointer Power",
+	description:"Doubles the Nans per tick of Pointers",
+	cost:100,
+	onBuy:"PointerUp1",
+	require:50,
+	icon:"UpgImgs/PointerUp1.svg",
+	bought:getCookie("PointerUp1")
+	
+}
+
 
 
 //Push Upgrades Into Array
 Upgrades.push(ClickUp1);
 Upgrades.push(TicTime1);
+Upgrades.push(PointerUp1);
 
 //Added objects to document
 
@@ -42,7 +54,7 @@ function addUpgrades(){ //needs to be a function so it can be run through multip
 			var newDiv=document.createElement('div');
 			newDiv.className="Upgrade";
 			newDiv.id=Upgrades[i].onBuy;
-			newDiv.title=("Cost: $" + Upgrades[i].cost);
+			newDiv.title=("Cost: $" + Upgrades[i].cost + " Nans");
 			document.getElementById('Upgrades').appendChild(newDiv); //add in Upgrade div
 
 			newDiv.innerHTML=("<div id='UpgradeOverlay' onclick=buyUpgrade('" + Upgrades[i].onBuy + "');><img src='" + Upgrades[i].icon + "' id='UpgradeImg'><p id='UpgradeTitle'>" + Upgrades[i].name + "</p><p id='UpgradeDescription'>" + Upgrades[i].description + "</p></div>"); //all the magic code. What does any of it mean? I don't know anymore.
@@ -78,7 +90,21 @@ function buyUpgrade(name){ //buy an upgrade
 			}
 			break;
 			
+		case "PointerUp1":
+			if(userVars.Kaching>=PointerUp1.cost){
+				userVars.autoIncrement=userVars.autoIncrement+(Pointer.power*Pointer.owned);
+				Pointer.power=Pointer.power*2;
+				userVars.PointerPower=Pointer.power;
+				userVars.PointerUp1=true;
+				PointerUp1.bought=true;
+				userVars.Kaching-=PointerUp1.cost;
+				var killDiv = document.getElementById("PointerUp1");
+				killDiv.parentNode.removeChild(killDiv); //Div is kill
+			}
+			break;
+		
 		default:
+			console.log("Upgrade Unknown");
 			break;
 	}
 }
