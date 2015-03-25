@@ -24,10 +24,10 @@ userVars ={
 	PointerPower:1,
 	
 	//the fedora
-	Pointer:false,
-	PointerOwned:0,
-	PointerCost:25,
-	PointerPower:10
+	Fedora:false,
+	FedoraOwned:0,
+	FedoraCost:25,
+	FedoraPower:10
 }
 
 
