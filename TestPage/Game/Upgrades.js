@@ -32,7 +32,7 @@ PointerUp1={
 	onBuy:"PointerUp1",
 	require:50,
 	icon:"UpgImgs/PointerUp1.svg",
-	bought:getCookie("PointerUp1")
+	bought:false
 	
 }
 
@@ -43,7 +43,7 @@ FedoraUp1={
 	onBuy:"FedoraUp1",
 	require:125,
 	icon:"UpgImgs/FedoraUp1.svg",
-	bought:getCookie("FedoraUp1")
+	bought:false
 	
 }
 

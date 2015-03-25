@@ -25,6 +25,7 @@ body{
 }
 
 #Frame{
+	margin-top:25px;
 	height:506px;
 	width:95.5%;
 	margin-left:2.25%;
@@ -168,4 +169,23 @@ body{
 
 #loadText{
 	font-size:100px;
+}
+
+#resetButton{
+	float:right;
+	margin-right:2.25%;
+	margin-bottom:18px;
+}
+
+#monCount{
+	min-width:35%;
+	margin:0px;
+}
+
+#moneyDisplay{
+	width:35%;
+	margin:0px;
+	margin-bottom:18px;
+	float:left;
+	margin-left:2.25%;
 }

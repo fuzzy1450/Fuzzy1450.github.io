@@ -110,7 +110,7 @@ function loadGame(){
 	}
 	
 	if(parseFloat(getCookie("lastVersion"))>=0.3){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
-		userVars.PointerUp1 = getCookie("FedoraUp1");
+		userVars.FedoraUp1 = getCookie("FedoraUp1");
 	}
 		
 		
@@ -153,3 +153,23 @@ function checkForMax(){ // Check if you should increase the MaxKaching
 	}
 }
 setInterval(checkForMax, 750); // Run checkForMax every 0.75 seconds(too quick?)
+
+
+//reset Game Function. does what it says.
+function resetGame(){
+
+	if (confirm('Are you sure you want to reset the game?')) {
+	
+
+		var cookies = document.cookie.split(";");
+
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i];
+			var eqPos = cookie.indexOf("=");
+			var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+			document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+			location.reload();
+		}
+	
+	}
+}
