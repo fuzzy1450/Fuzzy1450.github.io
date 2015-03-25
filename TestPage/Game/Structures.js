@@ -16,9 +16,22 @@ Pointer={
 	owned:0
 }
 
+Fedora={
+	name:"Fedora",
+	description:"+10 Nans/t",
+	cost:50,
+	onBuy:"Fedora",
+	require:25,
+	icon:"StrucImgs/Fedora.svg",
+	bought:false,
+	power:10,
+	owned:0
+}
+
 
 //Push Upgrades Into Array
 Structures.push(Pointer);
+Structures.push(Fedora);
 
 
 //Added objects to document
@@ -59,8 +72,21 @@ function buyStructure(name){ //buy a structure
 				userVars.PointerCost=Pointer.cost;
 				document.getElementById('Pointer').title=("Cost: $" + Pointer.cost);
 				document.getElementById("Pointer").childNodes[0].children[2].innerHTML=(Pointer.description + "<br> Owned: " + Pointer.owned);
-
-				
+			}
+			break;
+			
+			case "Fedora":
+			if(userVars.Kaching>=Fedora.cost){
+				userVars.autoIncrement=userVars.autoIncrement+Fedora.power;
+				userVars.Fedora=true;
+				userVars.FedoraOwned++;
+				Fedora.bought=true;
+				Fedora.owned++;
+				userVars.Kaching-=Fedora.cost;
+				Fedora.cost=Math.round(Fedora.cost * 1.15);
+				userVars.FedoraCost=Fedora.cost;
+				document.getElementById('Fedora').title=("Cost: $" + Fedora.cost);
+				document.getElementById("Fedora").childNodes[0].children[2].innerHTML=(Fedora.description + "<br> Owned: " + Fedora.owned)
 			}
 			break;
 			

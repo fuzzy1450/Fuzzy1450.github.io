@@ -15,6 +15,7 @@ body{
 	-webkit-user-select: none; 
     -o-user-select: none; 
 	cursor:default;
+	background-color:#33AD5C;
 }
 
 #header{
@@ -154,4 +155,17 @@ body{
 	position:absolute;
 	top:0px;
 	
+}
+
+#Loading{
+	min-height:100%;
+    min-width:100%;
+    z-index:1000;
+	background-color:#33AD5C;
+	position:absolute;
+	text-align:center;
+}
+
+#loadText{
+	font-size:100px;
 }

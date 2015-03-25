@@ -1,4 +1,4 @@
-versionNumber =0.2; //Current Version. IMPORTANT: CAN ONLY HAVE ONE DECIMAL, NEEDS TO BE NUMBER
+versionNumber =0.3; //Current Version. IMPORTANT: CAN ONLY HAVE ONE DECIMAL, NEEDS TO BE NUMBER
 
 //User variables
 userVars ={
@@ -13,6 +13,7 @@ userVars ={
 	ClickUp1: false,
 	TicTime1: false,
 	PointerUp1: false,
+	FedoraUp1: false,
 	
 	//Structures, so they dont collapse
 	
@@ -20,7 +21,13 @@ userVars ={
 	Pointer:false,
 	PointerOwned:0,
 	PointerCost:15,
-	PointerPower:1
+	PointerPower:1,
+	
+	//the fedora
+	Pointer:false,
+	PointerOwned:0,
+	PointerCost:25,
+	PointerPower:10
 }
 
 
@@ -34,7 +41,7 @@ function bigButton(){ //The Big Button that is clicked
 }
 
 function refreshScreen(){ //function containing all bits that become replaced
-	document.getElementById("monCount").innerHTML = "You have " + userVars.Kaching + " Nans";
+	document.getElementById("monCount").innerHTML = "You have " + userVars.Kaching + " Nans. You are gaining " + userVars.autoIncrement + " Nans per tick. A tick takes " + (userVars.tickTime/1000) + " seconds.";
 }
 setInterval(refreshScreen, refreshRate); //Interval to refresh screen elements
 
@@ -49,6 +56,10 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("ClickUp1=" + userVars.ClickUp1 + ";");	
 	document.cookie=("TicTime1=" + userVars.TicTime1 + ";");
 	document.cookie=("PointerUp1=" + userVars.PointerUp1 + ";");
+	document.cookie=("FedoraUp1=" + userVars.FedoraUp1 + ";");
+	
+	
+	
 	
 	//Structures
 	
@@ -57,6 +68,13 @@ function saveGame(){ //save all stats as cookies
 	document.cookie=("PointerOwned=" + userVars.PointerOwned + ";");
 	document.cookie=("PointerCost=" + userVars.PointerCost + ";");
 	document.cookie=("PointerPower=" + userVars.PointerPower + ";");
+	
+	//Fedora
+	document.cookie=("Fedora=" + userVars.Fedora + ";");
+	document.cookie=("FedoraOwned=" + userVars.FedoraOwned + ";");
+	document.cookie=("FedoraCost=" + userVars.FedoraCost + ";");
+	document.cookie=("FedoraPower=" + userVars.FedoraPower + ";");
+	
 	
 	
 	document.cookie=("DoNotChange=true;"); //User has been on before
@@ -90,6 +108,10 @@ function loadGame(){
 	if(parseFloat(getCookie("lastVersion"))>=0.2){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
 		userVars.PointerUp1 = getCookie("PointerUp1");
 	}
+	
+	if(parseFloat(getCookie("lastVersion"))>=0.3){ //If the user's version is better than or equal to the version where these vars came out, load them. This stops Cookies returning NAN
+		userVars.PointerUp1 = getCookie("FedoraUp1");
+	}
 		
 		
 	
@@ -107,6 +129,18 @@ function loadGame(){
 	if(parseFloat(getCookie("lastVersion"))>=0.2){
 		userVars.PointerPower = parseInt(getCookie("PointerPower"));
 		Pointer.power = parseInt(getCookie("PointerPower"));
+	}
+	
+	if(parseFloat(getCookie("lastVersion"))>=0.3){
+		userVars.Fedora = getCookie("Fedora");
+		userVars.FedoraOwned = parseInt(getCookie("FedoraOwned"));
+		userVars.FedoraCost = parseInt(getCookie("FedoraCost"));
+		userVars.FedoraPower = parseInt(getCookie("FedoraPower"));
+		
+		Fedora.bought = getCookie("Fedora");
+		Fedora.owned = parseInt(getCookie("FedoraOwned"));
+		Fedora.cost = parseInt(getCookie("FedoraCost"));
+		Fedora.power = parseInt(getCookie("FedoraPower"));
 	}
 	
 	

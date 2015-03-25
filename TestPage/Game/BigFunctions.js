@@ -11,8 +11,21 @@ function getCookie(cname) { //look for Cookie with given name
     return false;
 };
 
-refreshRate=1000; // milliseconds for html to show changes. Set to 1 seconds. Change this if you think your computer can handle it.
+refreshRate=500; // milliseconds for html to show changes. Set to 1 seconds. Change this if you think your computer can handle it.
 
 function Pro(){
 	document.getElementById("ProClickers").style.display='block';
 }
+
+
+function loadTextFade() {
+    $('#loadText').fadeOut('slow');
+};
+
+setInterval(loadTextFade, 4000)
+
+function loadScreenFade() {
+    $('#Loading').fadeOut('slow');
+};
+
+setInterval(loadScreenFade, 5000)

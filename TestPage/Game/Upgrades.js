@@ -27,12 +27,23 @@ TicTime1={
 
 PointerUp1={
 	name:"Double Pointer Power",
-	description:"Doubles the Nans per tick of Pointers",
+	description:"Doubles the Nans per tick gained by Pointers",
 	cost:100,
 	onBuy:"PointerUp1",
 	require:50,
 	icon:"UpgImgs/PointerUp1.svg",
 	bought:getCookie("PointerUp1")
+	
+}
+
+FedoraUp1={
+	name:"Double Fedora Power",
+	description:"Doubles the Nans per tick gained by Fedoras",
+	cost:250,
+	onBuy:"FedoraUp1",
+	require:125,
+	icon:"UpgImgs/FedoraUp1.svg",
+	bought:getCookie("FedoraUp1")
 	
 }
 
@@ -42,6 +53,7 @@ PointerUp1={
 Upgrades.push(ClickUp1);
 Upgrades.push(TicTime1);
 Upgrades.push(PointerUp1);
+Upgrades.push(FedoraUp1);
 
 //Added objects to document
 
@@ -99,6 +111,19 @@ function buyUpgrade(name){ //buy an upgrade
 				PointerUp1.bought=true;
 				userVars.Kaching-=PointerUp1.cost;
 				var killDiv = document.getElementById("PointerUp1");
+				killDiv.parentNode.removeChild(killDiv); //Div is kill
+			}
+			break;
+			
+		case "FedoraUp1":
+			if(userVars.Kaching>=FedoraUp1.cost){
+				userVars.autoIncrement=userVars.autoIncrement+(Fedora.power*Fedora.owned);
+				Fedora.power=Fedora.power*2;
+				userVars.FedoraPower=Fedora.power;
+				userVars.FedoraUp1=true;
+				FedoraUp1.bought=true;
+				userVars.Kaching-=FedoraUp1.cost;
+				var killDiv = document.getElementById("FedoraUp1");
 				killDiv.parentNode.removeChild(killDiv); //Div is kill
 			}
 			break;
