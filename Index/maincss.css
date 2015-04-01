@@ -1,0 +1,105 @@
+html {
+	min-width:100%;
+	min-height:100%;
+	margin:0px;
+}
+
+body{
+	min-height:100%;
+	min-width:100%;
+	margin:0px;
+	background-image:url('images/background.svg');
+}
+
+a{
+	color:black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;  
+	text-decoration: none;
+	margin:0px;
+	width:100%;
+	height:100%;
+}
+
+h1{
+	margin:0px;
+}
+
+a:hover {
+	color:black;
+	text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;  
+    text-decoration: underline;
+}
+
+#container{
+	margin-left:auto;
+    margin-right:auto;
+	margin-top:8%;
+	height:700px;
+	width:900px;
+	background-color:black;
+	color:white;
+	background-image:url('images/helix.png');
+	background-position: center; 
+}
+
+#title{
+	margin-left:auto;
+    margin-right:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	width:150px;
+	text-align:center;
+	top:3%;
+	position:relative;
+}
+
+#linkTable{
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+	height:550px;
+	margin-top:10%;
+}
+
+.tg {
+	border-collapse:collapse;
+	border-spacing:0;
+	margin-left:auto;
+	margin-right:auto;
+	top:75px;
+	width:100%;
+	height:100%;
+}
+
+.tg td{
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+}
+
+.tg th{
+	width:150px;
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+	text-align:center;
+}
+
+#link{
+	width:150px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#musac{
+	visibility:hidden;
+}
