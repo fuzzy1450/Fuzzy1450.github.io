@@ -13,6 +13,10 @@ h1{
 	font-family: 'Press Start 2P', cursive;
 }
 
+h2{
+	font-family: 'Press Start 2P', cursive;
+}
+
 p{
 	font-family: 'Press Start 2P', cursive;
 }
@@ -22,16 +26,17 @@ p{
     height: 135vw;
     max-height: 100vh;
     max-width: 74.07vh;
-    margin: auto;
+	margin-left:1095px !important;
+    margin-top: auto;
     position: fixed; 
 	background-image:url('images/fennekin.png');
 	background-size: contain;
 	z-index:-1;
 	float:right;
-	margin-left: 57vw;
 }
 
 #content{
+	min-width:990px;
 	width:57vw;
 	height:auto;
 	min-height:100%;
@@ -44,4 +49,80 @@ p{
 	text-align:center;
 	width:100%;
 	height:50px;
+}
+
+#bitOfSpace{
+	height:100px;
+}
+
+#gameList{
+	width:100%;
+}
+
+#GenericRow{
+	height:250px;
+	width:100px;
+}
+
+#GenericCell{
+	width:100%;
+}
+
+.yellowCell{
+	background-color:#F2CE00;
+}
+
+.redCell{
+	background-color:#e05536;
+}
+
+.whiteCell{
+	background-color:#fffefc;
+}
+
+.greyishCell{
+	background-color:#504c4b;
+}
+
+#img{
+	height:224px;
+	width:224px;
+	float:right;
+	margin:0px;
+}
+#gameTitle{
+	float:left;
+	margin:0px;
+	z-index:1;
+	position:absolute;
+	margin-top:5px;
+}
+#gameDesc{
+	position:relative;
+	top:50px;
+	font-size:12px;
+	float:left;
+	width:75%;
+	margin:0px;
+	z-index:0;
+}
+
+#downloads{
+	position:relative;
+	top:100px;
+	float:left;
+	left:50px;
+	z-index:1;
+	width:300px;
+	text-align:center;
+}
+
+#downloads p{
+	float:left;
+	margin:0px;
+}
+
+#downloads a{
+	float:left;
+	color: black;
 }
