@@ -1,0 +1,20 @@
+html{
+	min-width:100%;
+	min-height:100%;
+	margin:0px;
+	
+}
+
+body{
+	min-width:100%;
+	min-height:100%;
+	margin:0px;
+	background-image:url("img/gif.gif");
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+}
+
+#invisible{
+	visibility:hidden;
+}
