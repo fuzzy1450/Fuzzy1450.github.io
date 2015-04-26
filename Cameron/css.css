@@ -17,3 +17,46 @@ body{
 #invisible{
 	visibility:hidden;
 }
+
+#button{
+	margin-top:5px;
+	margin-right:10px;
+	float:right;
+}
+#popupWindow{
+	height:500px;
+	width:580.9px;
+	position: absolute;
+	margin: auto;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	background-color:#414141;
+	display:none;
+}
+
+#link{
+	margin-top:25px;
+	width:580px;
+	border:0px;
+	text-align:center;
+	color:white;
+	background-color:#414141;
+}
+
+#textThing{
+	text-align:center;
+	margin-top: 100px;
+	color:white;
+}
+
+#goAway{
+	margin:0 auto;
+	margin-top:50px;
+    display:block;
+	background-color: #202020;
+	border:0px;
+	color:white;
+
+}

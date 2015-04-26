@@ -3,7 +3,7 @@
 
 	<head>
 	
-		<title>500 Miles</title>
+		<title>You Shouldn't See This</title>
 		<link type="text/css" rel="stylesheet" href="css.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!--Ayy it the J-->
 	</head>
@@ -15,6 +15,20 @@
 			Jesus guy, update your browser!
 		</audio>
 	
+		<button id="button" type="button" onclick="newSong()">New Song</button>
+		
+		<button id="button" type="button" onclick="copyWindow()">Get Link to Song</button>
+		
+		<div id="popupWindow">
+			
+			<input type="text" value="" id="link" readonly onclick="selectText()">
+			
+			<p id="textThing">Just copy and paste into your friendly neighborhood URL bar!</p>
+			
+			<button id="goAway" type="button" onclick="fadeWindow()">Thanks Mr. PopUp Window! Now Get out!</button>
+			
+		</div>
+		
 		
 		<script src="songSelect.js" type="text/javascript"></script>
 		<script src="js.js" type="text/javascript"></script>
