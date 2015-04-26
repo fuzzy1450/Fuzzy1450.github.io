@@ -2,17 +2,17 @@ function getURLParameter(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
 }
 
-indexNum=Math.floor(Math.random() * 5) + 1;
+
 
 if (getURLParameter("id")){
 	indexNum=getURLParameter("id");
 }
 
 
-Descriptions=["500 Miles", "Bacon", "Woman's Man", "Hwat", "Slam Jam"]
+Descriptions=["500 Miles", "Bacon", "Woman's Man", "Hwat", "Slam Jam", "Chris is bad"]
 
 
-
+indexNum=Math.floor(Math.random() * Descriptions.length) + 1;
 
 
 var mp3Source=$('source#mp3');
@@ -28,10 +28,10 @@ document.title = Descriptions[indexNum-1];
 function newSong(){
 	fadeWindow();
 	oldNum = indexNum;
-	indexNum=Math.floor(Math.random() * 5) + 1;
+	indexNum=Math.floor(Math.random() * Descriptions.length) + 1;
 	
 	while(oldNum==indexNum){
-		indexNum=Math.floor(Math.random() * 5) + 1;
+		indexNum=Math.floor(Math.random() * Descriptions.length) + 1;
 	}
 	
 	mp3Source.attr('src', ('mp3/'+indexNum.toString()+'.mp3'));
