@@ -1,7 +1,7 @@
 function getURLParameter(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
 }
-Descriptions=["500 Miles", "Bacon", "Woman's Man", "Hwat", "Slam Jam", "Chris is bad", "When Mama isn't Titan", "Got that Star", "Cameron, Everyday", "Wigglytuff's a badass", "All Your Planets Are Belong To Us", "My Toucan", "When Chrom isn't Home", "Sank The Hodgeraru", "Dinosaur", "Buisness", "Every DBZ Episode", "Physics Don't Real", "Best Region", "Da Da Destiny", "Dance Training", "Chemistry. What A Class."]
+Descriptions=["500 Miles", "Bacon", "Woman's Man", "Hwat", "Slam Jam", "Chris is bad", "When Mama isn't Titan", "Got that Star", "Cameron, Everyday", "Wigglytuff's a badass", "All Your Planets Are Belong To Us", "My Toucan", "When Chrom isn't Home", "Sank The Hodgeraru", "Dinosaur", "Buisness", "Every DBZ Episode", "Physics Don't Real", "Best Region", "Da Da Destiny", "Dance Training", "TF2 Is A Serious Game"]
 
 indexNum=Math.floor(Math.random() * Descriptions.length) + 1;
 if (getURLParameter("id")){
