@@ -1,0 +1,65 @@
+html{
+	min-height:100%;
+	min-width:100%;
+	background-color:black;
+}
+
+
+body{
+	min-height:750px;
+}
+
+#SpiralContainer{
+	position: relative;
+	min-height:750px;
+}
+#SprialContainerTwo{
+	position: absolute;
+	top: 50%;
+	left: 701px;
+	transform: translate(-50%, -50%);
+	width:1px;
+}
+
+
+
+$duration:30s;
+$ease:ease-in-out;
+body{
+	overflow:hidden; 
+}
+.holder{
+	width:500px;
+	height: 250px;
+	position: relative;
+	.circle{
+		border-radius:100% 100% 0 0;
+		position: absolute;
+		bottom: 0;
+		left:50%;
+		transform:translateX(-50%);
+		transform-origin:bottom center;
+	}
+	@for $i from 1 through 23{
+		.circle:nth-child(#{$i}){
+			$size:0;
+			@if($i > 1){
+				$size:31px * ($i - 1);
+				border:13px solid white;
+			}@else{
+				$size:25px;
+				background:white;
+			}
+			border-bottom:none;
+			border-radius:$size $size 0 0;
+			width:$size;
+			height:$size / 2;
+			z-index: 23 - $i;
+			animation: circle-#{$i} $duration infinite $ease;
+		}
+		@keyframes circle-#{$i}{
+			0%{transform:translateX(-50%) rotate(0deg);}
+			100%{transform:translateX(-50%) rotate(-($i * 360deg));}
+		}
+	}
+}
