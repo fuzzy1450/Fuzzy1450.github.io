@@ -22,23 +22,27 @@ while(LinkNumb!=LinkList.length){
 	while(!InLoopDone){
 		
 		rand=Math.floor(Math.random() * 100);
-		if(eval("typeof(num"+rand+")!=\"undefined\"")){
+		if(eval("typeof(num"+rand+")==\"undefined\"")){
 			if(LinkList[LinkNumb].id!="no-change"){
 				if(pop[rand].data.url[27]!="m"){
-				
+					
 					if(pop[rand].data.url[26]!="."){
 						LinkList[LinkNumb].setAttribute('href', (pop[rand].data.url+".gif"));
 					} else {
 						LinkList[LinkNumb].setAttribute('href', pop[rand].data.url);
 					}
+				
+				
 				} else {
 					LinkNumb--;
 				}
 				eval("num"+rand+"=true;");
-			
-		}
+			}
 			
 			InLoopDone=true;
+		} else{
+			InLoopDone=true;
+			LinkNumb--;
 		}
 	}
 	
