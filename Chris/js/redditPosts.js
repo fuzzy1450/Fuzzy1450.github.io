@@ -29,7 +29,14 @@ while(LinkNumb!=LinkList.length){
 			
 		if(LinkList[LinkNumb].id!="no-change"){
 			if(pop[rand].data.url[27]!="m"){
+				
+				if(pop[rand].data.url[26]!="."){
+					LinkList[LinkNumb].setAttribute('href', (pop[rand].data.url+".gif"));
+				} else {
 					LinkList[LinkNumb].setAttribute('href', pop[rand].data.url);
+				}
+				
+				
 			} else {
 				LinkNumb--;
 			}
