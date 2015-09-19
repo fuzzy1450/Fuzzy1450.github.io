@@ -17,7 +17,7 @@
 
 <body id="parentPageTemp" class="psparent">
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script>
 var audio = new Audio("audio/nicememe.mp3" ) ;
@@ -210,11 +210,11 @@ var audio = new Audio("audio/nicememe.mp3" ) ;
 <td>10-11(A)</td>
 <td class="notInSession">&nbsp;</td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td>
 <td align="left">Acc Physics&nbsp;<br><a href="http://ps.stjoes.org/guardian/teacherinfo.html?frn=0051954&amp;nolink=true" title="Details about Fowler, Patrick" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a id="no-change" href="mailto:fowlerp@toomanysnipers.tf">Fowler, Patrick</a>&nbsp;-&nbsp;Rm: 204</td>
-<td><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=09/01/2015&amp;enddate=11/04/2015&amp;fg=Q1">A+!<br>jk 0</a></td>
+<td><div id="JK"><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=09/01/2015&amp;enddate=11/04/2015&amp;fg=Q1">A+<br>100</a></div></td>
 <td><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=11/05/2015&amp;enddate=01/15/2016&amp;fg=Q2">--</a></td>
 <td><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=01/16/2016&amp;enddate=01/22/2016&amp;fg=E1">--</a></td>
-<td><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=08/26/2015&amp;enddate=01/24/2016&amp;fg=S1">A+!<br>jk 0</a></td>
-<td><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=08/26/2015&amp;enddate=06/30/2016&amp;fg=Y1">A+!<br>jk 0</a></td>
+<td><div id="JKK"><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=08/26/2015&amp;enddate=01/24/2016&amp;fg=S1">A+<br>100</a></div></td>
+<td><div id="JKKJ"><a href="http://ps.stjoes.org/guardian/scores.html?frn=004133514&amp;begdate=08/26/2015&amp;enddate=06/30/2016&amp;fg=Y1">A+<br>100</a></div></td>
 <td>0</td>
 <td>0</td>
 </tr>
@@ -335,6 +335,7 @@ provided by this system. For official grades and student records contact
 
 <!--<iframe style="height:0px;width:0px;visibility:hidden" src="javascript:false" id="disablecache"></iframe>-->
 
+<!-- link changer -->
 <script type="text/javascript">
 	
 	z=document.getElementsByTagName("a");
@@ -348,8 +349,40 @@ provided by this system. For official grades and student records contact
 		x++;
 	}
 	
+</script>
+
+<!-- mouseover -->
+<script type="text/javascript">
+
+	function changeContent(id, msg) {
+        var jk = document.getElementById(id);
+        if (id) {
+            jk.innerHTML = msg;
+        }
+    }
+	
+	
+	
+	var t = "changeContent('JK', \"<a href='http://imgur.com/lHE2ds6.jpg'>jk, F<br>0</a>\");"
+	var n = "changeContent('JK', \"<a href='http://imgur.com/lHE2ds6.jpg'>A+<br>100</a>\");"
+	var e=document.getElementById("JK").setAttribute("onmouseover", t);
+	var e=document.getElementById("JK").setAttribute("onmouseout", n);
+	
+	var t = "changeContent('JKK', \"<a href='http://imgur.com/lHE2ds6.jpg'>jk, F<br>0</a>\");"
+	var n = "changeContent('JKK', \"<a href='http://imgur.com/lHE2ds6.jpg'>A+<br>100</a>\");"
+	var e=document.getElementById("JKK").setAttribute("onmouseover", t);
+	var e=document.getElementById("JKK").setAttribute("onmouseout", n);
+	
+	var t = "changeContent('JKKJ', \"<a href='http://imgur.com/lHE2ds6.jpg'>jk, F<br>0</a>\");"
+	var n = "changeContent('JKKJ', \"<a href='http://imgur.com/lHE2ds6.jpg'>A+<br>100</a>\");"
+	var e=document.getElementById("JKKJ").setAttribute("onmouseover", t);
+	var e=document.getElementById("JKKJ").setAttribute("onmouseout", n);
+	
+	
 	
 </script>
+
+
 
 
 <div id="sessiontimeoutwarning" style="display: none"></div></body></html>
