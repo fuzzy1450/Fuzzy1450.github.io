@@ -35,7 +35,7 @@ while(LinkNumb!=LinkList.length){
 					LinkNumb--;
 				}
 				eval("num"+rand+"=true;");
-			}
+			
 		}
 			
 			InLoopDone=true;
