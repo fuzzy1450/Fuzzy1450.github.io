@@ -1,0 +1,255 @@
+html{
+	min-height:100%;
+	min-width:100%;
+	margin:0px;
+}
+
+head{
+	max-height:0px;
+	max-width:0px;
+	position:absolute;
+	margin:0px;
+}
+
+body{
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iNDIuNDIiIGhlaWdodD0iNDIuNDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwIDApIHJvdGF0ZSg0NSkiIGZpbGw9IiM0NDQiPjwvcmVjdD4KPC9zdmc+");
+	min-height:100%;
+	min-width:100%;
+	width:100%;
+	margin:0px;
+	margin-top:0px;
+	overflow:auto;
+	height:100%;
+	position:absolute;
+}
+
+#container{
+	min-height:100%;
+	min-width: 700px;
+	max-width: 80%;
+	z-index:-1;
+	margin: 0 auto;
+	background-color:#000000;
+	position:static;
+}
+
+#diceImageDiv{
+	width: 350px;
+	height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#ffffff;
+	position:relative;
+	top:50px;
+	text-align: center;
+	font-size:350px;
+	border-radius:25px;
+	margin-bottom:25px;
+}
+
+#DiceText{
+	margin:0px;
+	height:350px;
+}
+#DiceImage{
+	z-index:500;
+	max-width:100%;
+	max-height:100%;
+	overflow:hidden;
+}
+
+#settingsButton{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:5%;
+	left:82%;
+	background-color:#ffffff;
+	cursor:pointer;
+	z-index:100;
+}
+
+#settingsImage{
+	max-height:100%;
+	max-width:100%;
+}
+
+#rollLog{
+
+	margin-top:65px;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 450px;
+	height:375px;
+	
+	background-color:#ffffff;
+	color:#000000
+	
+}
+
+#lastRolls{
+	width: 450px;
+	height: 185px;
+	border-bottom: 5px;
+	border-style: solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	overflow-y:scroll;
+}
+
+#logText{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-size:28px;
+	text-align:center;
+}
+
+#totalStats{
+	width: 450px;
+	height: 162px;
+	overflow-y:scroll;
+}
+
+#Stat{
+	font-size:20px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+
+#totalAverage{
+	height:21px;
+	margin-top:1px !important;
+	margin-bottom:1px !important;
+	font-size:10px;
+	text-align:center;
+}
+
+#rollButton{
+
+	margin-top:25px;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+	
+	width: 150px;
+	height:75px;
+	
+	background-color:#ffffff;
+	color:#000000
+	
+}
+#theButton{
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	height:75px;
+	
+	background-color:#ffffff;
+	color:#000000;
+	font-size:26px;
+	
+}
+
+#bottomMargin{
+	height:50px;
+}
+
+#settingsContainer{
+	min-height:100%;
+	height:100%;
+	width:100%;
+	z-index:100000;
+	background-color: rgba(0,0,0,0.5);
+	position:fixed;
+	top:0px;
+	display:none;
+}
+
+#settingsWindow{
+	height:500px;
+	width:500px;
+	margin:0 auto;
+	margin-top:11%;
+	margin-bottom:auto;
+	opacity: 100 !important;
+	background-color:#ffffff;
+	z-index:1000000000;
+	position:relative;
+}
+
+#closeSettings{
+	background-image: url('../img/x.svg');
+	background-size: contain;
+	height:25px;
+	width:25px;
+	position:absolute;
+	left:92%;
+	top:3%;
+	cursor:pointer;
+}
+
+#sidesInput{
+	left:62.5px;
+	text-align:center;
+	width:75%;
+	margin-top:10%;
+	position:absolute;
+	z-index:1000000000;
+	margin-bottom:5%;
+}
+
+#sideText{
+	text-align:center;
+}
+
+#weightInput{
+	left:62.5px;
+	text-align:center;
+	width:75%;
+	margin-top:25%;
+	position:absolute;
+	z-index:1000000000;
+	margin-bottom:5%;
+}
+
+#weightText{
+	text-align:center;
+}
+
+#settingSubmit{
+	left:62.5px;
+	text-align:center;
+	width:75%;
+	margin-top:50%;
+	position:absolute;
+	z-index:1000000000;
+	margin-bottom:5%;
+}
+
+#errorText{
+	color:red;
+	left:62.5px;
+	text-align:center;
+	width:75%;
+	margin-top:60%;
+	position:absolute;
+	z-index:1000000000;
+	margin-bottom:5%;
+}
+
+#overrideButton{
+	display:none;
+	left:62.5px;
+	text-align:center;
+	width:75%;
+	margin-top:85%;
+	position:absolute;
+	z-index:1000000000;
+	margin-bottom:5%;
+}

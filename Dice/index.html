@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+	
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Dice</title>
+		
+		
+	</head>
+	<body>
+		<div id="container">
+			
+			<div id="diceImageDiv">
+				<img src="" id="DiceImage">
+				<p id="DiceText"></p>
+			</div>
+			<div id="settingsButton">
+				<img src="img/settings.svg" onclick="showSettings()" id="settingsImage">
+			</div>
+			
+			
+			<div id="rollLog">
+				<div id="lastRolls"></div>
+				
+				<div id="totalStats">
+					
+				</div>
+				<div id="totalAverage"></div>
+			
+			</div>
+			
+			<div id="rollButton">
+				<button id="theButton" text="Roll the Dice" onclick="diceRoll();">Roll the Dice</button>
+			</div>
+			
+			<div id="bottomMargin"></div>
+			
+		</div>
+		
+		<div id="settingsContainer">
+			<div id="settingsWindow">
+				<div id="closeSettings" onclick="closeSettings();"></div>
+				<div id="sidesInput">
+					<h3>How many sides should the dice have?</h1>
+					<input type="text" id="sideText" placeholder="Enter a Number" value="0"></input>
+				</div>
+				<div id="weightInput">
+					<h3>Which side should be weighted?</h1>
+					<input type="text" id="weightText" placeholder="Enter a Number" value="0"></input>
+				</div>
+				<div id="settingSubmit">
+					<button id="Submit" text="Submit" onclick="changeSettings();">Submit</button>
+				</div>
+				<h4 id="errorText"></h4>
+				
+				<button id="overrideButton" onclick="Override();">Override</button>
+			</div>
+		</div>
+		
+		<script src="dice.js"></script>
+		
+	</body>
+</html>
