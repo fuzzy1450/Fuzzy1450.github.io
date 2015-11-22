@@ -193,8 +193,8 @@ function changeSettings(){
 		}else if(parseInt(newWeight)>parseInt(newSides)) {
 			Error.innerHTML = "Error: The side you want to weight does not exist.";
 		} else {
-			sides = newSides;
-			weight=newWeight;
+			sides = parseInt(newSides);
+			weight=parseInt(newWeight);
 			Error.innerHTML="";
 			document.getElementById("settingsContainer").style.display="none";
 			document.getElementById("sideText").value="0";
@@ -230,8 +230,8 @@ function Override(){
 	} else if(newWeight>newSides) {
 		Error.innerHTML = "Error: The side you want to weight does not exist.";
 	} else {
-			sides = newSides;
-			weight=newWeight;
+			sides = parseInt(newSides);
+			weight=parseInt(newWeight);
 			Error.innerHTML="";
 			document.getElementById("settingsContainer").style.display="none";
 			document.getElementById("sideText").value="0";
