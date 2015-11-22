@@ -198,6 +198,7 @@ function changeSettings(){
 			document.getElementById("weightText").value="0"
 			document.getElementById("lastRolls").innerHTML="";
 			document.getElementById("totalStats").innerHTML="";
+			document.getElementById("totalAverage").innerHTML="";
 			rollStatsInit = 0;
 			while (rollStatsInit!=sides){
 				rollStats[rollStatsInit]=0;
@@ -234,6 +235,7 @@ function Override(){
 			document.getElementById("weightText").value="0"
 			textLog.innerHTML="";
 			statLog.innerHTML="";
+			document.getElementById("totalAverage").innerHTML="";
 			rollStatsInit = 0;
 			while (rollStatsInit!=sides){
 				rollStats[rollStatsInit]=0;
