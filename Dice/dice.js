@@ -187,7 +187,7 @@ function changeSettings(){
 			Error.innerHTML="Error: One of the numbers you entered is 0.<br>This is an invalid entry.";
 		} else if(newWeight<0||newSides<0){
 			Error.innerHTML = "Error: You cannot enter negative numbers.";
-		}else if(newWeight>newSides) {
+		}else if(parseInt(newWeight)>parseInt(newSides)) {
 			Error.innerHTML = "Error: The side you want to weight does not exist.";
 		} else {
 			sides = newSides;
@@ -196,8 +196,8 @@ function changeSettings(){
 			document.getElementById("settingsContainer").style.display="none";
 			document.getElementById("sideText").value="0";
 			document.getElementById("weightText").value="0"
-			textLog.innerHTML="";
-			statLog.innerHTML="";
+			document.getElementById("lastRolls").innerHTML="";
+			document.getElementById("totalStats").innerHTML="";
 		}
 	}
 }
