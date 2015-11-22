@@ -71,6 +71,9 @@ function weightedRandom(){
 					if(toReturn==0){
 						toReturn=Math.floor(Math.random() * sides) +1
 					}
+					if(toReturn>sides){
+						toReturn=weight;
+					}
 					
 				}
 				z++;
