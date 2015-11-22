@@ -203,6 +203,7 @@ function changeSettings(){
 			document.getElementById("totalStats").innerHTML="";
 			document.getElementById("totalAverage").innerHTML="";
 			rollStatsInit = 0;
+			totsRolls = 0;
 			while (rollStatsInit!=sides){
 				rollStats[rollStatsInit]=0;
 				rollStatsInit++;
@@ -240,6 +241,7 @@ function Override(){
 			statLog.innerHTML="";
 			document.getElementById("totalAverage").innerHTML="";
 			rollStatsInit = 0;
+			totsRolls=0;
 			while (rollStatsInit!=sides){
 				rollStats[rollStatsInit]=0;
 				rollStatsInit++;
