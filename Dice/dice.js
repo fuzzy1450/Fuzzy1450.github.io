@@ -198,6 +198,11 @@ function changeSettings(){
 			document.getElementById("weightText").value="0"
 			document.getElementById("lastRolls").innerHTML="";
 			document.getElementById("totalStats").innerHTML="";
+			rollStatsInit = 0;
+			while (rollStatsInit!=sides){
+				rollStats[rollStatsInit]=0;
+				rollStatsInit++;
+			}
 		}
 	}
 }
@@ -229,6 +234,11 @@ function Override(){
 			document.getElementById("weightText").value="0"
 			textLog.innerHTML="";
 			statLog.innerHTML="";
+			rollStatsInit = 0;
+			while (rollStatsInit!=sides){
+				rollStats[rollStatsInit]=0;
+				rollStatsInit++;
+			}
 	}
 	document.getElementById("overrideButton").style.display="none";
 }
