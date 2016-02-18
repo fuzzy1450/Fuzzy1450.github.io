@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SampleJam</title>
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="main.css" />
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body onkeydown="getKey()" onkeyup="clearKey()" onload="startKeyboard()">
+        
+        
+			<img src="assets/SampleJam%20Logo.png" class="logo">
+		
+		<div class="menu">
+            <button onclick="firstDropdown()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="menu-content">
+                <button onclick="helpMenu()" class="help">Help</button>
+                <button onclick="sbMenu()" class="soundboard">Soundboard Settings</button>
+                <button onclick="recMenu()" class="recsettings">Recording Settings</button>
+                <button onclick="expMenu()" class="export">Export</button>
+            </div>
+        </div>
+            <div id="helpDropdown">
+                
+            
+            </div>
+            <div id="sbDropdown" class="n">
+                <button onclick="soundMenu()" class="soundMenu sbDrop">Sounds</button> <br>
+                <button onclick="loopMenu()" class="loopMenu sbDrop">Loops</button> <br>
+                <button onclick="soundboards()" class="soundboards sbDrop">Soundboards</button>
+                <button onclick="closeSbDrop()" class ="exit">X</button>
+                <div id="sbMenu">
+                    <button onclick="newKeyboard()" class="newKeyboard">+</button>
+                        <div class="upload">
+                            <button onclick="upload()" class="upload">Upload</button>
+                        </div>
+                    <p id="nonintrusive">Choose Keyboard Color:</p><input type="color" id="color" oninput="recolorKeyboard()">
+                </div>
+        </div>
+        <div id="keyboardName"><h1>Soundboard 1</h1></div>
+        <div class="keyboard">
+            <div class="row0">
+                <canvas class="canvas key49"></canvas>
+                <canvas class="canvas key50"></canvas>
+                <canvas class="canvas key51"></canvas>
+                <canvas class="canvas key52"></canvas>
+                <canvas class="canvas key53"></canvas>
+                <canvas class="canvas key54"></canvas>
+                <canvas class="canvas key55"></canvas>
+                <canvas class="canvas key56"></canvas>
+                <canvas class="canvas key57"></canvas>
+                <canvas class="canvas key48"></canvas>
+            </div>
+            <div class="row1">
+                <canvas class="canvas key81"></canvas>
+                <canvas class="canvas key87"></canvas>
+                <canvas class="canvas key69"></canvas>
+                <canvas class="canvas key82"></canvas>
+                <canvas class="canvas key84"></canvas>
+                <canvas class="canvas key89"></canvas>
+                <canvas class="canvas key85"></canvas>
+                <canvas class="canvas key73"></canvas>
+                <canvas class="canvas key79"></canvas>
+                <canvas class="canvas key80"></canvas>
+            </div>
+            <div class="row2">
+                <canvas class="canvas key65"></canvas>
+                <canvas class="canvas key83"></canvas>
+                <canvas class="canvas key68"></canvas>
+                <canvas class="canvas key70"></canvas>
+                <canvas class="canvas key71"></canvas>
+                <canvas class="canvas key72"></canvas>
+                <canvas class="canvas key74"></canvas>
+                <canvas class="canvas key75"></canvas>
+                <canvas class="canvas key76"></canvas>
+            </div>
+            <div class="row3">
+                <canvas class="canvas key90"></canvas>
+                <canvas class="canvas key88"></canvas>
+                <canvas class="canvas key67"></canvas>
+                <canvas class="canvas key86"></canvas>
+                <canvas class="canvas key66"></canvas>
+                <canvas class="canvas key78"></canvas>
+                <canvas class="canvas key77"></canvas>
+            </div>
+        </div>
+        
+        
+        
+        <script src="main.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/190177/ion.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+
+		<script src = "keyboardManipulator.js"></script>
+		<script src="keyboardPlayer.js"></script>
+        <div class="key1" style="display:none"></div>
+	</body>
+</html>

@@ -1,0 +1,280 @@
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+        html, body {
+    font-family: 'Lato', sans-serif
+}
+
+body {
+    background-color: dimgray;
+}
+
+
+.dropbtn {
+    background-color: #000000;
+    color: #07C1BE;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #333333;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #474747;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.logo {
+    width: 5.75%;
+    float: right;
+    margin: 3px;
+}
+.help {
+  background-color: #000000;
+    color: #07C1BE;
+    width: 160px;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.help:hover, .help:hover {
+    background-color: #333333;
+}
+
+#keyboardName{
+    text-align: center;
+    margin: 0 auto;
+	width: 30%;
+	min-width: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    position:relative;
+}
+
+#sbMenu{
+    top: 0px;
+    left: 145px;
+    display: none;
+    height: 396px;
+    width: 250px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000001;
+    background-color: dimgray;
+    position: absolute;
+    float: right;
+    border-left: 0px;
+}
+
+.sbDrop{
+    margin-bottom: 16px;
+    width:150px;
+    text-align: left;
+}
+
+.color{
+    float:left;
+}
+
+#nonintrusive{
+    margin-right:0px;
+    margin:0px;
+    font-size: 16px;
+    width:200px;
+    position: relative;
+}
+
+.exit{
+    float:left;
+    margin-top:auto;
+    width:25px;
+    background-color: white;
+    height: 25px;
+    position:absolute;
+    left:5px;
+    top: 370px;
+}
+
+.soundboard {
+    background-color: #000000;
+    color: #07C1BE;
+    width: 160px;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.soundboard:hover, .soundboard:focus {
+    background-color: #333333;
+}
+
+.recsettings {
+    background-color: #000000;
+    color: #07C1BE;
+    width: 160px;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.recsettings:hover, .recsettings:focus {
+    background-color: #333333;
+}
+
+.export {
+    background-color: #000000;
+    color: #07C1BE;
+    width: 160px;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.export:hover, .export:focus {
+    background-color: #333333;
+}
+
+#sbDropdown{
+    display: none;
+    position: fixed;
+    background-color: #000000;
+    color: #07C1BE;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+	z-index: 100;
+    left: 34.15080527%;
+}
+
+.keyboard {
+    margin:auto;
+    text-align: center;
+    width: 800px;
+    height: 400px;
+    padding-top: 50px;
+}
+
+
+.row0 canvas {
+    width: 65px;
+    height: 65px;
+    margin-left: 2px;
+    margin-top: 4px;
+    margin-right: 2px;
+    margin-bottom: 24px;
+	 border-style: solid;
+	 border-width: 2px;
+	 border-color: #07C1BE;
+	 border-radius: 10px;
+}
+
+.row1 canvas {
+    width: 65px;
+    height: 65px;
+    margin: 2px;
+	 margin-bottom: 12px;
+    border-style: solid;
+	 border-width: 2px;
+	 border-color: #07C1BE;
+	 border-radius: 10px;
+}
+
+.row2 canvas {
+    width: 65px;
+    height: 65px;
+    margin: 2px;
+	 margin-bottom: 12px;
+    border-style: solid;
+	 border-width: 2px;
+	 border-color: #07C1BE;
+	 border-radius: 10px;
+}
+
+.row3 canvas {
+    width: 65px;
+    height: 65px;
+    margin: 2px;
+	 margin-bottom: 12px;
+    border-style: solid;
+	 border-width: 2px;
+	 border-color: #07C1BE;
+	 border-radius: 10px;
+}
+
+.soundMenu {
+    margin: 5px;
+    background-color: #000000;
+    color: #07C1BE;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.soundMenu:hover {
+    background-color: #333333;
+}
+
+.loopMenu {
+    margin: 5px;
+    background-color: #000000;
+    color: #07C1BE;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.loopMenu:hover {
+    background-color: #333333;
+}
+
+.soundboards{
+    margin: 5px;
+    background-color: #000000;
+    color: #07C1BE;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.soundboards:hover {
+    background-color: #333333;
+}
+
+.newKeyboard {
+    background-color: #333333;
+    color: #07C1BE;
+    border: none;
+    margin: 2px;
+}
+
+.newKeyboard:hover {
+    background-color: black;
+}
