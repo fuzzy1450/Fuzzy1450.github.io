@@ -250,7 +250,7 @@ function clearKey(e){
 	playing[e.keyCode] = false;
     document.getElementsByClassName("key"+e.keyCode)[0].style.backgroundColor="transparent";
 }
-
+FirstRun = true;
 function playSound(x, y){
 	if(!playing[y]){
 		window[x+"s"][window[x+"sIndex"]].play();
@@ -261,13 +261,10 @@ function playSound(x, y){
 		playing[y]=true;
         console.log("key"+y);
         document.getElementsByClassName("key"+y)[0].style.backgroundColor="#FFFFFF";
-		startKeyboard();
+		if(FirstRun){
+			startKeyboard();
+			FirstRun = false
+		}
 	}
-}
-firstRun=true;
-function playMetro() {
-	playSound("metronome", 77);
-	setTimeout(startKeyboard(), 3000);
-    document.getElementsByClassName("key"+77)[0].style.backgroundColor="transparent";
 }
 
