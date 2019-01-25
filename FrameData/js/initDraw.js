@@ -115,8 +115,21 @@ function lastFrame(){
 	
 }
 function deleteCurrentFrame(){
+	if(TotalFrames == 1){
+		return false;
+	}
 	if(currentFrameNumber == TotalFrames){
-		d
+		lastFrame();
+		$("#canvas"+TotalFrames).remove();
+		TotalFrames--;
+	} else{
+		$("#canvas"+currentFrameNumber).remove();
+		for(i=currentFrameNumber+1; !(i>TotalFrames); i++){
+			console.log("changing frame " + i)
+			document.getElementById("canvas"+(i)).id="canvas"+(i-1)
+		}
+		TotalFrames--;
+		lastFrame();
 	}
 }
 
