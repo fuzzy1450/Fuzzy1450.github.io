@@ -11,7 +11,7 @@ function newFrame(){
 		newCanvas.className="canvas";
 		newCanvas.style.display = "none";
 		newCanvas.style.zIndex = (TotalFrames+1)
-		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='active frames'><div class='character'><p class='damageValue'>character model</p></div>"
+		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='repeated frames'><div class='character'><p class='damageValue'>character model</p></div>"
 		document.getElementById("canvasCollection").appendChild(newCanvas)
 		
 		TotalFrames++;
@@ -33,7 +33,7 @@ function newFrame(){
 		newCanvas.style.zIndex=(currentFrameNumber+1)
 		newCanvas.className="canvas";
 		newCanvas.style.display = "none";
-		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='active frames'><div class='character'><p class='damageValue'>character model</p></div>"
+		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='repeated frames'><div class='character'><p class='damageValue'>character model</p></div>"
 		document.getElementById("canvasCollection").appendChild(newCanvas)
 		
 		TotalFrames++;
@@ -185,10 +185,10 @@ function downloadString(text, fileType, fileName) {
 function switchBoxType(){
 	if(boxType == "hitbox"){
 		boxType = "hurtbox"
-		document.getElementById("BoxSwitchButton").innerHTML="switch to hitbox"
+		document.getElementById("BoxSwitchButton").innerHTML="switch to blue bodies"
 	} else {
 		boxType = "hitbox"
-		document.getElementById("BoxSwitchButton").innerHTML="switch to hurtbox"
+		document.getElementById("BoxSwitchButton").innerHTML="switch to red ouchies"
 	}
 }
 
