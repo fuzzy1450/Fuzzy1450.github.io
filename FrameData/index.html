@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+    .canvas {
+        width:2000px;
+        height:2000px;
+        border: 10px solid transparent;
+    }
+    .hurtbox {
+        border: 1px solid #FF0000;
+        position: absolute;
+    }
+	.hitbox {
+        border: 1px solid #0000FF;
+        position: absolute;
+    }
+	.character {
+		border: 1px solid #00FF00;
+        position: absolute;
+	}
+	.damageValue {
+		top: 0px;
+		position: relative;
+		margin: 0 0 0 0;
+	}
+    </style>
+</head>
+<body>
+	<div id="canvasOptions">
+		<button onclick="newFrame()" id="createNewFrame">Insert Frame After This One</button>
+		<button onclick="lastFrame()" id="lastFrame" disabled>-</button>
+		<button id="currentFrameNumber" disabled>Frame 1</button>
+		<button onclick="nextFrame()" id="nextFrame" disabled>+</button>
+		
+	</div>
+	<div id="boxOptions">
+		<button onclick="switchBoxType()" id="BoxSwitchButton">switch to hurtbox</button>
+		<button onclick="switchClickType('makeBox')" id="makeBox" disabled>Make Boxes</button>
+		<button onclick="switchClickType('disableBoxMaking')" id="disableBoxMaking">Edit Values</button>
+		<button onclick="switchClickType('removeBox')" id="removeBox">Remove Box</button>
+		
+	</div>
+	
+	<div id="canvasCollection">
+		<div id="canvas1" class="canvas">
+			<input id ='activeFrames' type='text' stype='left:0px;' placeholder='active frames'>
+			<div class="character" style="left: 300px; top: 70px; width: 250px; height: 400px;"><p class="damageValue">character model</p></div>
+		</div>
+	</div>
+	
+	
+    <script src="js/initDraw.js"></script>
+    <script>
+        initDraw(document.getElementById('canvas1'));
+		setInputFilter(document.getElementById("activeFrames"), function(value) {
+						return /^\d*$/.test(value);
+					});
+    </script>
+</body>
+</html>
