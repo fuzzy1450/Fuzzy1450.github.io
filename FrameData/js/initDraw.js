@@ -114,9 +114,14 @@ function lastFrame(){
 	}
 	
 }
+function deleteCurrentFrame(){
+	if(currentFrameNumber == TotalFrames){
+		d
+	}
+}
 
 function exportMove(){
-	characterCoords = [parseInt(document.getElementsByClassName("character")[0].style.left), parseInt(document.getElementsByClassName("character")[0].style.top)]
+	characterCoords = [parseInt(getComputedStyle(document.getElementsByClassName("character")[0]).left), parseInt(getComputedStyle(document.getElementsByClassName("character")[0]).top)]
 	
 	
 	buildString="m:"
