@@ -1,5 +1,6 @@
 boxType = "hitbox"
 clickType = "makeBox"
+lightbox=false;
 currentFrameNumber = 1
 TotalFrames = 1
 
@@ -9,7 +10,8 @@ function newFrame(){
 		newCanvas.id="canvas"+(TotalFrames+1);
 		newCanvas.className="canvas";
 		newCanvas.style.display = "none";
-		newCanvas.innerHTML = "<input id ='activeFrames' type='text' stype='left:0px;' placeholder='active frames'><div class='character' style='left: 300px; top: 70px; width: 250px; height: 400px;'><p class='damageValue'>character model</p></div>"
+		newCanvas.style.zIndex = (TotalFrames+1)
+		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='active frames'><div class='character'><p class='damageValue'>character model</p></div>"
 		document.getElementById("canvasCollection").appendChild(newCanvas)
 		
 		TotalFrames++;
@@ -23,13 +25,15 @@ function newFrame(){
 		
 		newCanvas = document.createElement("div");
 		for(i = TotalFrames; i>currentFrameNumber; i--){
+			document.getElementById("canvas"+i).style.zIndex=(i+1)
 			document.getElementById("canvas"+i).id="canvas"+(i+1)
 		}
 		
 		newCanvas.id="canvas"+(currentFrameNumber+1);
+		newCanvas.style.zIndex=(currentFrameNumber+1)
 		newCanvas.className="canvas";
 		newCanvas.style.display = "none";
-		newCanvas.innerHTML = "<input id ='activeFrames' type='text' stype='left:0px;' placeholder='active frames'><div class='character' style='left: 300px; top: 70px; width: 250px; height: 400px;'><p class='damageValue'>character model</p></div>"
+		newCanvas.innerHTML = "<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='active frames'><div class='character'><p class='damageValue'>character model</p></div>"
 		document.getElementById("canvasCollection").appendChild(newCanvas)
 		
 		TotalFrames++;
@@ -40,30 +44,75 @@ function newFrame(){
 						return /^\d*$/.test(value);
 					});
 	}
+	
+	if(lightbox){
+		newCanvas.style.opacity = ".5"
+	}
 }
 function nextFrame(){
-	document.getElementById("canvas" + currentFrameNumber).style.display = "none"
-	currentFrameNumber++;
-	document.getElementById("canvas" + currentFrameNumber).style.display = "block"
-	
-	document.getElementById("lastFrame").disabled=false;
-	if(currentFrameNumber==TotalFrames){
-		document.getElementById("nextFrame").disabled=true;
+	if(!lightbox){
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		currentFrameNumber++;
+		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		
+		document.getElementById("lastFrame").disabled=false;
+		if(currentFrameNumber==TotalFrames){
+			document.getElementById("nextFrame").disabled=true;
+		}
+		
+		document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
+	} else{
+		
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+		if(currentFrameNumber!= 1){
+			document.getElementById("canvas" + (currentFrameNumber-1)).style.display = "none"
+		}
+		currentFrameNumber++;
+		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		
+		document.getElementById("lastFrame").disabled=false;
+		if(currentFrameNumber==TotalFrames){
+			document.getElementById("nextFrame").disabled=true;
+		}
+		
+		document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
 	}
-	
-	document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
 }
 function lastFrame(){
-	document.getElementById("canvas" + currentFrameNumber).style.display = "none"
-	currentFrameNumber--;
-	document.getElementById("canvas" + currentFrameNumber).style.display = "block"
-	
-	document.getElementById("nextFrame").disabled=false;
-	if(currentFrameNumber==1){
-		document.getElementById("lastFrame").disabled=true;
+	if(!lightbox){
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		currentFrameNumber--;
+		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		
+		document.getElementById("nextFrame").disabled=false;
+		if(currentFrameNumber==1){
+			document.getElementById("lastFrame").disabled=true;
+		}
+		
+		document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
+	} else {
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		currentFrameNumber--;
+		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		
+		if(currentFrameNumber!=1){
+			document.getElementById("canvas" + (currentFrameNumber-1)).style.display = "block"
+		}
+		
+		document.getElementById("nextFrame").disabled=false;
+		if(currentFrameNumber==1){
+			document.getElementById("lastFrame").disabled=true;
+		}
+		
+		document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
 	}
 	
-	document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
 }
 
 function exportMove(){
@@ -152,6 +201,30 @@ function switchClickType(x){
 	document.getElementById(clickType).disabled=false;
 	clickType = x
 	document.getElementById(clickType).disabled=true;
+}
+
+function toggleLightbox(){
+	if(lightbox){
+		lightbox = false
+		
+		canvasArray = document.getElementsByClassName("canvas")
+		for(i=0; i<canvasArray.length; i++){
+			canvasArray[i].style.opacity = 1;
+		}
+		if(currentFrameNumber>1){
+			canvasArray[currentFrameNumber-2].style.display = "none";
+		}
+	} else{
+		lightbox = true
+		
+		canvasArray = document.getElementsByClassName("canvas")
+		for(i=0; i<canvasArray.length; i++){
+			canvasArray[i].style.opacity = 0.5;
+		}
+		if(currentFrameNumber>1){
+			canvasArray[currentFrameNumber-2].style.display = "block";
+		}
+	}
 }
 
 function setInputFilter(textbox, inputFilter) {

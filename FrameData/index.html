@@ -3,9 +3,12 @@
 <head>
     <style>
     .canvas {
+		top:0px;
+		left:0px;
         width:2000px;
         height:2000px;
-        border: 10px solid transparent;
+		position: absolute;
+		margin 0 0 0 0;
     }
     .hurtbox {
         border: 1px solid #FF0000;
@@ -18,12 +21,26 @@
 	.character {
 		border: 1px solid #00FF00;
         position: absolute;
+		left:400px;
+		top:150px;
+		width:250px;
+		height:400px;
 	}
 	.damageValue {
 		top: 0px;
 		position: relative;
 		margin: 0 0 0 0;
 	}
+	#canvasOptions{
+		z-index:100000000000000;
+		position:absolute;
+	}
+	#boxOptions{
+		z-index:100000000000000;
+		top:35px;
+		position:absolute;
+		}
+	
     </style>
 </head>
 <body>
@@ -32,6 +49,7 @@
 		<button onclick="lastFrame()" id="lastFrame" disabled>-</button>
 		<button id="currentFrameNumber" disabled>Frame 1</button>
 		<button onclick="nextFrame()" id="nextFrame" disabled>+</button>
+		<button onclick="toggleLightbox()" id="lightboxToggle">Toggle Lightbox</button>
 		
 	</div>
 	<div id="boxOptions">
@@ -43,9 +61,9 @@
 	</div>
 	
 	<div id="canvasCollection">
-		<div id="canvas1" class="canvas">
-			<input id ='activeFrames' type='text' stype='left:0px;' placeholder='active frames'>
-			<div class="character" style="left: 300px; top: 70px; width: 250px; height: 400px;"><p class="damageValue">character model</p></div>
+		<div id="canvas1" class="canvas" style="z-index:1">
+			<input id ='activeFrames' type='text' style='left:10px; top:100px; position:absolute;' placeholder='active frames'>
+			<div class="character"><p class="damageValue">character model</p></div>
 		</div>
 	</div>
 	
