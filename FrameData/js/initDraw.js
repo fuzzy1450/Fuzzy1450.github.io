@@ -51,8 +51,10 @@ function newFrame(){
 }
 function nextFrame(){
 	if(!lightbox){
-		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
-		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		try{
+			document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+			document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		} catch {}
 		currentFrameNumber++;
 		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
 		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
@@ -64,11 +66,12 @@ function nextFrame(){
 		
 		document.getElementById("currentFrameNumber").innerHTML = "Frame " +currentFrameNumber;	
 	} else{
-		
-		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
-		if(currentFrameNumber!= 1){
-			document.getElementById("canvas" + (currentFrameNumber-1)).style.display = "none"
-		}
+		try{
+			document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
+			if(currentFrameNumber!= 1){
+				document.getElementById("canvas" + (currentFrameNumber-1)).style.display = "none"
+			}
+		} catch {}
 		currentFrameNumber++;
 		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
 		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
@@ -84,12 +87,18 @@ function nextFrame(){
 function lastFrame(){
 	if(!lightbox){
 		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
-		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
+		document.getElementById("canvas" + currentFrameNumber).style.display = "none";
 		currentFrameNumber--;
-		document.getElementById("canvas" + currentFrameNumber).style.display = "block"
-		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		try{
+			document.getElementById("canvas" + currentFrameNumber).style.display = "block";
+			document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		} catch {}
+		if(currentFrameNumber == TotalFrames){
+			document.getElementById("nextFrame").disabled=true;
+		} else{
+			document.getElementById("nextFrame").disabled=false;
+		}
 		
-		document.getElementById("nextFrame").disabled=false;
 		if(currentFrameNumber==1){
 			document.getElementById("lastFrame").disabled=true;
 		}
@@ -99,13 +108,18 @@ function lastFrame(){
 		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "none"
 		document.getElementById("canvas" + currentFrameNumber).style.display = "none"
 		currentFrameNumber--;
-		document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
-		
+		try{
+			document.getElementById("canvas" + currentFrameNumber).getElementsByTagName("input")[0].style.display = "inline-block"
+		} catch{}
 		if(currentFrameNumber!=1){
 			document.getElementById("canvas" + (currentFrameNumber-1)).style.display = "block"
 		}
 		
-		document.getElementById("nextFrame").disabled=false;
+		if(currentFrameNumber == TotalFrames){
+			document.getElementById("nextFrame").disabled=true;
+		} else{
+			document.getElementById("nextFrame").disabled=false;
+		}
 		if(currentFrameNumber==1){
 			document.getElementById("lastFrame").disabled=true;
 		}
@@ -119,17 +133,26 @@ function deleteCurrentFrame(){
 		return false;
 	}
 	if(currentFrameNumber == TotalFrames){
-		lastFrame();
-		$("#canvas"+TotalFrames).remove();
 		TotalFrames--;
+		lastFrame();
+		$("#canvas"+(TotalFrames+1)).remove();
 	} else{
+		
 		$("#canvas"+currentFrameNumber).remove();
+		if(currentFrameNumber==1){
+			nextFrame();
+			currentFrameNumber=1
+		}
+		
 		for(i=currentFrameNumber+1; !(i>TotalFrames); i++){
 			console.log("changing frame " + i)
 			document.getElementById("canvas"+(i)).id="canvas"+(i-1)
 		}
 		TotalFrames--;
-		lastFrame();
+		
+		if(currentFrameNumber!=1){
+			lastFrame()
+		}
 	}
 }
 
