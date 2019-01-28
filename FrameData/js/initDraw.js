@@ -1,5 +1,6 @@
 boxType = "hitbox"
 clickType = "makeBox"
+coppiedData = ""
 lightbox=false;
 currentFrameNumber = 1
 TotalFrames = 1
@@ -152,6 +153,28 @@ function deleteCurrentFrame(){
 		
 		if(currentFrameNumber!=1){
 			lastFrame()
+		}
+	}
+}
+
+
+function copyFrame(){
+	$("#pasteFrame")[0].disabled = false;
+	coppiedData = $("#canvas" + currentFrameNumber)[0].innerHTML
+}
+
+function pasteFrame(){
+	$("#canvas" + currentFrameNumber)[0].innerHTML = coppiedData
+	
+	childNodesArray =$("#canvas" + currentFrameNumber)[0].childNodes
+	
+	for(i = 0; i<childNodesArray.length; i++){
+		if(childNodesArray[i].className == "hitbox" || childNodesArray[i].className == "hurtbox"){
+			childNodesArray[i].onclick = function(e){
+				if(clickType == "removeBox"){
+					this.parentNode.removeChild(this);
+				}
+			}
 		}
 	}
 }
