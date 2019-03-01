@@ -259,6 +259,8 @@ function switchBoxType(){
 function switchClickType(x){
 	if(x == "makeBox"){
 		document.getElementById("BoxSwitchButton").disabled=false;
+	} else if(x=="moveBox"){
+		document.getElementById("BoxSwitchButton").disabled=false;
 	} else {
 		document.getElementById("BoxSwitchButton").disabled=true;
 	}
@@ -307,7 +309,7 @@ function setInputFilter(textbox, inputFilter) {
 }
 
 function initDraw(canvas) {
-    var mouse = {
+    mouse = {
         x: 0,
         y: 0,
         startX: 0,
@@ -326,7 +328,7 @@ function initDraw(canvas) {
     };
 	
 
-    var element = null;    
+    element = null;    
     canvas.onmousemove = function (e) {
 		if(clickType == "makeBox"){
 			setMousePosition(e);
@@ -335,6 +337,13 @@ function initDraw(canvas) {
 				element.style.height = Math.abs(mouse.y - mouse.startY) + 'px';
 				element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
 				element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y + 'px' : mouse.startY + 'px';
+			}
+		} else if(clickType == "moveBox"){
+			setMousePosition(e);
+			if(element !== null){
+				element.style.left = ( element.oldX + (mouse.x - mouse.startX)  ) + 'px';
+				element.style.top = ( element.oldY + (mouse.y - mouse.startY) ) + 'px';
+				
 			}
 		}
     }
@@ -345,9 +354,9 @@ function initDraw(canvas) {
 			if (element !== null) {
 				element = null;
 				canvas.style.cursor = "default";
-				console.log("finsihed.");
+				console.log("finsihed making.");
 			} else {
-				console.log("begun.");
+				console.log("begun making.");
 				mouse.startX = mouse.x;
 				mouse.startY = mouse.y;
 				element = document.createElement('div');
@@ -358,6 +367,21 @@ function initDraw(canvas) {
 				element.onclick = function(e){
 					if(clickType == "removeBox"){
 						this.parentNode.removeChild(this);
+						
+						
+					} else if(clickType=="moveBox"){
+						if(element !== null){
+							element = null;
+							canvas.style.cursor = "default";
+							console.log("finished moving.");
+						} else{
+							element = this;
+							element.oldX = parseInt(element.style.left);
+							element.oldY = parseInt(element.style.top);
+							mouse.startX = mouse.x;
+							mouse.startY = mouse.y;
+							console.log("begun moving");
+						}
 					}
 				}
 				
